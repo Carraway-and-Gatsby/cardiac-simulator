@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-23",
+  "assetId": "heart-hra-male-v1",
+  "assetSha256": "d0d261297693ed432727d0ea6cc2313eaa43500abe79a7d3ab63ed96dd5f29ce",
+  "renderer": "local React Three Fiber application, in-app Chromium browser",
+  "evidenceCategory": "actual UI captures, not expert anatomical validation",
+  "geometry": "static; source phase unknown; no end-diastolic/end-systolic geometry claimed",
+  "captures": [
+    {
+      "file": ".local/anatomy-evidence/anterior.png",
+      "bytes": 95878,
+      "sha256": "1c0290fc15d55bec1a4155148e29c1dc490abb84a53b99e174984134516d108f"
+    },
+    {
+      "file": ".local/anatomy-evidence/aortic-valve.png",
+      "bytes": 90743,
+      "sha256": "ee5f29db26861cf4504c893ddfca76f53312ccfa1b20acb3ece27fb9fdb6aa5d"
+    },
+    {
+      "file": ".local/anatomy-evidence/coronary-network.png",
+      "bytes": 89491,
+      "sha256": "65bcaed6977644a5929351747542051adf7c27b74a203383bf34a42945d0eb6a"
+    },
+    {
+      "file": ".local/anatomy-evidence/final.png",
+      "bytes": 95869,
+      "sha256": "cc7da4d10c8c36ef8efec94b52a5cb3481973ffc970dff154ccd718c6693666c"
+    },
+    {
+      "file": ".local/anatomy-evidence/inferior.png",
+      "bytes": 99030,
+      "sha256": "79f97f3041ddddc79e6fbdb0b3876d9e7fb7891380b076b25eef99e10fdb0bf6"
+    },
+    {
+      "file": ".local/anatomy-evidence/internal-structures.png",
+      "bytes": 96564,
+      "sha256": "c4c90ec8dd0a6ec1ed0d2a407d8fd361a8fc375180f1f5bafbd07983776e10bf"
+    },
+    {
+      "file": ".local/anatomy-evidence/mitral-valve.png",
+      "bytes": 92183,
+      "sha256": "18ce8950ffcde9c3778b393598da5cceeeb466a90d7ab31073d3cd5cd5a0be49"
+    },
+    {
+      "file": ".local/anatomy-evidence/mobile.png",
+      "bytes": 77346,
+      "sha256": "a511fe7f363b8dfed9cf19803ca2ec587f7b2e2daa3a8ab005687fe90226d418"
+    },
+    {
+      "file": ".local/anatomy-evidence/panned.png",
+      "bytes": 93163,
+      "sha256": "7769adf58a6564e0cabffeca4e4979358c1ebbfa5d34bbb7b1ab25644a327f5b"
+    },
+    {
+      "file": ".local/anatomy-evidence/posterior.png",
+      "bytes": 96464,
+      "sha256": "093ae9d2327c1edb729c22100630617021bd5d7b645ee08abeec4c8075e2a46f"
+    },
+    {
+      "file": ".local/anatomy-evidence/rotated-educational.png",
+      "bytes": 88743,
+      "sha256": "d9e0537d4acfe6f0b6945aa1d8d535efa2cae25f72dae70295ec850f7f174aa1"
+    },
+    {
+      "file": ".local/anatomy-evidence/rv-hidden.png",
+      "bytes": 97473,
+      "sha256": "df3a150e11abe75edb186bac2ee8e4ec0cdf70ce9d01a24bb149b41deb0ad2f1"
+    },
+    {
+      "file": ".local/anatomy-evidence/rv-section.png",
+      "bytes": 97629,
+      "sha256": "fb00823ca5a55db6cad9a28e9e88e85693dc007ab92c13fa08142286174922a0"
+    },
+    {
+      "file": ".local/anatomy-evidence/source-z-section-moved.png",
+      "bytes": 99945,
+      "sha256": "ad07ce37b7721a7f2fc3131e7c12730b820d1049c4e047df09997727e15ed9da"
+    },
+    {
+      "file": ".local/anatomy-evidence/source-z-section.png",
+      "bytes": 96204,
+      "sha256": "2f43f8762239e9e4863d023370fb9addcb00e33cbf9fe3fb381b133803490e73"
+    },
+    {
+      "file": ".local/anatomy-evidence/transparency-55.png",
+      "bytes": 96705,
+      "sha256": "a3572f30ffe9912f2426ec8808965dfb7e3db931e92b1747c93ce5a793cf38ff"
+    },
+    {
+      "file": ".local/anatomy-evidence/zoomed.png",
+      "bytes": 93979,
+      "sha256": "eb4551916c5f6cf8da88a7486ce21568d1b49336408981219247cb808025deeb"
+    }
+  ],
+  "finalBrowserReload": {
+    "time": "2026-10-23T06:23:40Z",
+    "runtimeErrors": 0,
+    "warnings": [
+      "upstream THREE.Clock deprecation"
+    ]
+  }
+}

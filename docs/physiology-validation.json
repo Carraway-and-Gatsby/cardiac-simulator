@@ -1,0 +1,1237 @@
+{
+  "generatedAt": "2026-10-23T07:28:11.874Z",
+  "nodeVersion": "v22.23.1",
+  "status": "numerical-and-mechanistic-checks-passed",
+  "scope": "Engineering verification of an estimated educational model. Numeric stability is distinct from physiological interpretation; out-of-domain combinations are explicitly enumerated and must not be presented as supported physiology. No patient calibration, external waveform comparison, expert review, or clinical validation is implied.",
+  "sourceHashes": {
+    "src/simulation/engine.ts": "922be76d8c50182fd5c51e9cb795f414c7897e907d9eb3a34fa134f4343f7cf1",
+    "src/simulation/types.ts": "bf9c5ebe684fab7fc1b28130bdac46e680fad11d4d96ad903c3570f868bb1766",
+    "src/simulation/parameters.ts": "9b5d19d3b8f4f5a626e22751f0a8c1d7949b91145deb195dba1405304ede4976",
+    "tests/simulation.test.ts": "4955dadd11c1c14578451998952f9ee361e9bc6188eff9470a8572f0190258d7",
+    "scripts/validate-physiology.ts": "e688f973d00c8fcddf2f7ef727a6276e05fb9fba1dc5ad3d6825b971acd2d042"
+  },
+  "units": {
+    "time": "s",
+    "volume": "mL",
+    "pressure": "mmHg",
+    "flow": "mL/s",
+    "cardiacOutput": "L/min",
+    "ejectionFraction": "fraction",
+    "regurgitantFraction": "fraction"
+  },
+  "parameterSchema": {
+    "heartRate": {
+      "label": "Heart rate",
+      "labelKo": "심박수",
+      "unit": "bpm",
+      "min": 50,
+      "max": 120,
+      "step": 5
+    },
+    "contractility": {
+      "label": "LV contractility",
+      "labelKo": "좌심실 수축력",
+      "unit": "×",
+      "min": 0.6,
+      "max": 1.4,
+      "step": 0.05
+    },
+    "diastolicStiffness": {
+      "label": "LV diastolic stiffness",
+      "labelKo": "좌심실 이완기 강성",
+      "unit": "×",
+      "min": 0.7,
+      "max": 1.5,
+      "step": 0.05
+    },
+    "systemicResistance": {
+      "label": "Systemic vascular resistance",
+      "labelKo": "전신 혈관 저항",
+      "unit": "×",
+      "min": 0.6,
+      "max": 1.6,
+      "step": 0.05
+    },
+    "bloodVolume": {
+      "label": "Total blood volume",
+      "labelKo": "총 혈액량",
+      "unit": "mL",
+      "min": 4500,
+      "max": 5500,
+      "step": 50
+    },
+    "severity": {
+      "label": "Mechanism intensity",
+      "labelKo": "기전 강도",
+      "unit": "",
+      "min": 0,
+      "max": 1,
+      "step": 0.05
+    }
+  },
+  "defaultParameters": {
+    "scenario": "normal",
+    "heartRate": 75,
+    "contractility": 1,
+    "diastolicStiffness": 1,
+    "systemicResistance": 1,
+    "bloodVolume": 5000,
+    "severity": 0.7
+  },
+  "modelConstants": {
+    "lv": {
+      "v0": 10,
+      "eMax": 2.2,
+      "passiveA": 0.3,
+      "passiveB": 0.027
+    },
+    "rv": {
+      "v0": 10,
+      "eMax": 0.65,
+      "passiveA": 0.3,
+      "passiveB": 0.023
+    },
+    "la": {
+      "v0": 10,
+      "eMin": 0.12,
+      "eMax": 0.28
+    },
+    "ra": {
+      "v0": 10,
+      "eMin": 0.08,
+      "eMax": 0.2
+    },
+    "vessels": {
+      "SA": {
+        "v0": 700,
+        "compliance": 1.5
+      },
+      "SV": {
+        "v0": 2600,
+        "compliance": 100
+      },
+      "PA": {
+        "v0": 100,
+        "compliance": 5
+      },
+      "PV": {
+        "v0": 300,
+        "compliance": 20
+      }
+    },
+    "resistance": {
+      "systemic": 1,
+      "pulmonaryBed": 0.1,
+      "systemicVenous": 0.03,
+      "pulmonaryVenous": 0.02,
+      "mitral": 0.008,
+      "aortic": 0.015,
+      "tricuspid": 0.008,
+      "pulmonary": 0.01
+    },
+    "timing": {
+      "ventricularPeak": 0.3,
+      "ventricularEnd": 0.45,
+      "atrialStart": 0.78,
+      "atrialEnd": 0.96
+    },
+    "initialVolumes": {
+      "LA": 50,
+      "LV": 125,
+      "SA": 850,
+      "SV": 3100,
+      "RA": 55,
+      "RV": 110,
+      "PA": 175,
+      "PV": 535
+    }
+  },
+  "checks": {
+    "mechanisms": true,
+    "convergenceAndConservation": true,
+    "supportedPresetAndPerturbationDomains": true,
+    "refinement": true,
+    "corners": true
+  },
+  "mechanismChecks": {
+    "baselineOutputSanityBand": true,
+    "baselineEfSanityBand": true,
+    "preloadEdv": true,
+    "preloadForwardStrokeVolume": true,
+    "afterloadPressure": true,
+    "afterloadOutput": true,
+    "reducedContractility": true,
+    "increasedStiffness": true,
+    "hfref": true,
+    "hfpefSurrogate": true,
+    "aorticObstruction": true,
+    "mitralReverseVolume": true,
+    "mitralEffectiveOutput": true
+  },
+  "presets": {
+    "normal": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 135.42915289502722,
+        "esv": 62.66248595730221,
+        "strokeVolume": 72.766666937725,
+        "forwardStrokeVolume": 72.77085674736483,
+        "ejectionFraction": 0.5373043054779153,
+        "cardiacOutput": 5.457814256052362,
+        "meanArterialPressure": 97.0251083345197,
+        "systolicPressure": 115.92131313993734,
+        "diastolicPressure": 77.48959621444912,
+        "meanLaPressure": 6.389844143826284,
+        "meanRaPressure": 3.337823989698092,
+        "meanPulmonaryPressure": 17.30477342589506,
+        "lvEndDiastolicPressure": 8.569463625305534,
+        "peakLvPressure": 118.3249416242702,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 13.977078418635699,
+        "meanAorticGradient": 6.655871043966288,
+        "pulmonaryStrokeVolume": 72.7660050548247
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 41,
+        "periodicResidualMl": 0.000819896576103929,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 22.70531530406764,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 3.183231456205249e-11,
+        "minVolumeMl": 29.06803565574684,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "hfref": {
+      "parameters": {
+        "scenario": "hfref",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 157.65223460120413,
+        "esv": 97.09394022151675,
+        "strokeVolume": 60.55829437968738,
+        "forwardStrokeVolume": 60.556143572455795,
+        "ejectionFraction": 0.3841258230996546,
+        "cardiacOutput": 4.541710767934184,
+        "meanArterialPressure": 80.7273529970517,
+        "systolicPressure": 97.00880563432436,
+        "diastolicPressure": 64.66285277260863,
+        "meanLaPressure": 10.250482808800498,
+        "meanRaPressure": 2.7587661201669076,
+        "meanPulmonaryPressure": 19.334315785321017,
+        "lvEndDiastolicPressure": 15.861545215687118,
+        "peakLvPressure": 99.24562481331868,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 10.006794019819537,
+        "meanAorticGradient": 5.860271958624752,
+        "pulmonaryStrokeVolume": 60.5607850382077
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 47,
+        "periodicResidualMl": 0.0009841409328146256,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 24.02908246191421,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 2.637534635141492e-11,
+        "minVolumeMl": 27.5418805778859,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "hfpef": {
+      "parameters": {
+        "scenario": "hfpef",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 102.33382039113863,
+        "esv": 48.72859669386544,
+        "strokeVolume": 53.60522369727319,
+        "forwardStrokeVolume": 53.6011293673623,
+        "ejectionFraction": 0.5238270543636913,
+        "cardiacOutput": 4.020084702552172,
+        "meanArterialPressure": 71.55560270149056,
+        "systolicPressure": 85.25691345609334,
+        "diastolicPressure": 57.48935501470229,
+        "meanLaPressure": 14.073456987918366,
+        "meanRaPressure": 2.5389575408840317,
+        "meanPulmonaryPressure": 22.114336335383953,
+        "lvEndDiastolicPressure": 24.445865631469736,
+        "peakLvPressure": 87.01014047533897,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 8.301146135977703,
+        "meanAorticGradient": 4.516949103991205,
+        "pulmonaryStrokeVolume": 53.60289248918323
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 65,
+        "periodicResidualMl": 0.0009215822401529294,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 26.415543583922094,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 2.7284841053187847e-11,
+        "minVolumeMl": 26.17489345021743,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "aortic-stenosis": {
+      "parameters": {
+        "scenario": "aortic-stenosis",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 143.31175015803,
+        "esv": 74.30204865496201,
+        "strokeVolume": 69.009701503068,
+        "forwardStrokeVolume": 69.00919407084997,
+        "ejectionFraction": 0.4815355435054762,
+        "cardiacOutput": 5.175689555313747,
+        "meanArterialPressure": 91.99896991160603,
+        "systolicPressure": 110.04428523344389,
+        "diastolicPressure": 75.3012257257235,
+        "meanLaPressure": 7.4968258591275765,
+        "meanRaPressure": 3.1488062940832515,
+        "meanPulmonaryPressure": 17.848190431850163,
+        "lvEndDiastolicPressure": 10.673073957525396,
+        "peakLvPressure": 178.9058082959431,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 85.62970137928384,
+        "meanAorticGradient": 55.619350445162624,
+        "pulmonaryStrokeVolume": 69.00759432458352
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 43,
+        "periodicResidualMl": 0.0009593854811100755,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 23.03621730561923,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 1.7280399333685637e-11,
+        "minVolumeMl": 28.777904260155495,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "mitral-regurgitation": {
+      "parameters": {
+        "scenario": "mitral-regurgitation",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 149.46072212310875,
+        "esv": 47.157920500420595,
+        "strokeVolume": 102.30280162268815,
+        "forwardStrokeVolume": 64.76210772885989,
+        "ejectionFraction": 0.6844795085254756,
+        "cardiacOutput": 4.857158079664491,
+        "meanArterialPressure": 86.34861045474364,
+        "systolicPressure": 104.20739537770471,
+        "diastolicPressure": 68.68029297705993,
+        "meanLaPressure": 9.282536589802204,
+        "meanRaPressure": 2.9686005484910325,
+        "meanPulmonaryPressure": 18.99661555881985,
+        "lvEndDiastolicPressure": 12.402639298165575,
+        "peakLvPressure": 106.80666675076958,
+        "regurgitantVolume": 37.54179322793773,
+        "regurgitantFraction": 0.36696345766708766,
+        "peakAorticGradient": 13.908937958153984,
+        "meanAorticGradient": 6.7460528884229,
+        "pulmonaryStrokeVolume": 64.75750941269163
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 41,
+        "periodicResidualMl": 0.0008378030579478946,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 23.860419796550207,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 1.8189894035458565e-11,
+        "minVolumeMl": 28.664827512973396,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    }
+  },
+  "perturbations": {
+    "reducedBloodVolume": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 4750,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 117.61168611867882,
+        "esv": 55.104558875090056,
+        "strokeVolume": 62.50712724358876,
+        "forwardStrokeVolume": 62.511272166482435,
+        "ejectionFraction": 0.5314703777013662,
+        "cardiacOutput": 4.688345412486183,
+        "meanArterialPressure": 83.03528743792067,
+        "systolicPressure": 99.28644818981418,
+        "diastolicPressure": 66.22450368781438,
+        "meanLaPressure": 4.4334489265425345,
+        "meanRaPressure": 2.5570844607234253,
+        "meanPulmonaryPressure": 13.809469263163324,
+        "lvEndDiastolicPressure": 5.182398681970426,
+        "peakLvPressure": 101.3517144262787,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 12.259754232860573,
+        "meanAorticGradient": 5.752571058265258,
+        "pulmonaryStrokeVolume": 62.50789809138932
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 35,
+        "periodicResidualMl": 0.0007044152339403809,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 18.437371176002095,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 3.183231456205249e-11,
+        "minVolumeMl": 20.638149671040715,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "increasedBloodVolume": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5250,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 149.70242521336394,
+        "esv": 68.77345291928519,
+        "strokeVolume": 80.92897229407875,
+        "forwardStrokeVolume": 80.92664607716992,
+        "ejectionFraction": 0.5405989393874844,
+        "cardiacOutput": 6.069498455787744,
+        "meanArterialPressure": 108.38110163230273,
+        "systolicPressure": 129.3699463696593,
+        "diastolicPressure": 86.70138673993627,
+        "meanLaPressure": 8.677625081013414,
+        "meanRaPressure": 4.185340196577397,
+        "meanPulmonaryPressure": 20.817043910427312,
+        "lvEndDiastolicPressure": 12.739585550547789,
+        "peakLvPressure": 132.04283983723835,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 15.163432809365204,
+        "meanAorticGradient": 7.356967825197255,
+        "pulmonaryStrokeVolume": 80.92733648866545
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 43,
+        "periodicResidualMl": 0.0009326333056378644,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 26.833922589080807,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 5.820766091346741e-11,
+        "minVolumeMl": 39.270830064753206,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "increasedAfterload": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1.3,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 139.7344461017465,
+        "esv": 71.33120752283278,
+        "strokeVolume": 68.40323857891372,
+        "forwardStrokeVolume": 68.39690372020503,
+        "ejectionFraction": 0.4895230953225839,
+        "cardiacOutput": 5.129767779015377,
+        "meanArterialPressure": 116.79211488872065,
+        "systolicPressure": 134.79877021164188,
+        "diastolicPressure": 97.97976454303057,
+        "meanLaPressure": 6.945413264243905,
+        "meanRaPressure": 3.0714150360845163,
+        "meanPulmonaryPressure": 17.205828801504726,
+        "lvEndDiastolicPressure": 9.66279087243361,
+        "peakLvPressure": 137.11599330612168,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 13.774583001381089,
+        "meanAorticGradient": 6.662036076643343,
+        "pulmonaryStrokeVolume": 68.40099837049742
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 43,
+        "periodicResidualMl": 0.0008284845716843847,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 22.333950448422147,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 7.003109203651547e-11,
+        "minVolumeMl": 28.207338577803736,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "reducedContractility": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 0.7,
+        "diastolicStiffness": 1,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 147.1606917773582,
+        "esv": 79.97333539074675,
+        "strokeVolume": 67.18735638661146,
+        "forwardStrokeVolume": 67.19298939032547,
+        "ejectionFraction": 0.4565577640003235,
+        "cardiacOutput": 5.039474204274409,
+        "meanArterialPressure": 89.56831719336076,
+        "systolicPressure": 107.36170913108079,
+        "diastolicPressure": 71.63273833229057,
+        "meanLaPressure": 8.124392632779465,
+        "meanRaPressure": 3.064460308552211,
+        "meanPulmonaryPressure": 18.202403777969874,
+        "lvEndDiastolicPressure": 11.874771169300926,
+        "peakLvPressure": 109.71441456454126,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 11.93067539064026,
+        "meanAorticGradient": 6.3790812712334235,
+        "pulmonaryStrokeVolume": 67.18801457504266
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 44,
+        "periodicResidualMl": 0.0009342610014755337,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 23.289046998955513,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 2.2737367544323206e-11,
+        "minVolumeMl": 28.673177766555625,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    },
+    "increasedStiffness": {
+      "parameters": {
+        "scenario": "normal",
+        "heartRate": 75,
+        "contractility": 1,
+        "diastolicStiffness": 1.3,
+        "systemicResistance": 1,
+        "bloodVolume": 5000,
+        "severity": 0.7
+      },
+      "metrics": {
+        "edv": 122.16530185047745,
+        "esv": 57.0755987858329,
+        "strokeVolume": 65.08970306464454,
+        "forwardStrokeVolume": 65.09038514486295,
+        "ejectionFraction": 0.532800247522903,
+        "cardiacOutput": 4.881778885864721,
+        "meanArterialPressure": 86.81226952615356,
+        "systolicPressure": 103.6267464328921,
+        "diastolicPressure": 69.45314424155124,
+        "meanLaPressure": 9.47741808965059,
+        "meanRaPressure": 3.0094922852515946,
+        "meanPulmonaryPressure": 19.240961769904587,
+        "lvEndDiastolicPressure": 15.0793587551845,
+        "peakLvPressure": 105.76902322573683,
+        "regurgitantVolume": 0,
+        "regurgitantFraction": 0,
+        "peakAorticGradient": 11.631323226821195,
+        "meanAorticGradient": 5.811641530791345,
+        "pulmonaryStrokeVolume": 65.0919183819206
+      },
+      "diagnostics": {
+        "converged": true,
+        "cycles": 40,
+        "periodicResidualMl": 0.0009899276042233396,
+        "modelWithinDomain": true,
+        "minActivePassiveMarginMmHg": 24.232109586644516,
+        "simultaneousLeftValveFlowFraction": 0,
+        "simultaneousRightValveFlowFraction": 0,
+        "volumeErrorMl": 3.8198777474462986e-11,
+        "minVolumeMl": 29.447820967314026,
+        "stepSizeSeconds": 0.001,
+        "warnings": []
+      }
+    }
+  },
+  "refinement": {
+    "normal": {
+      "fine": {
+        "parameters": {
+          "scenario": "normal",
+          "heartRate": 75,
+          "contractility": 1,
+          "diastolicStiffness": 1,
+          "systemicResistance": 1,
+          "bloodVolume": 5000,
+          "severity": 0.7
+        },
+        "metrics": {
+          "edv": 135.42920330375745,
+          "esv": 62.662630251897845,
+          "strokeVolume": 72.76657305185961,
+          "forwardStrokeVolume": 72.76670840326985,
+          "ejectionFraction": 0.5373034122385679,
+          "cardiacOutput": 5.457503130245238,
+          "meanArterialPressure": 97.02498579060337,
+          "systolicPressure": 115.92124842423875,
+          "diastolicPressure": 77.49019621939881,
+          "meanLaPressure": 6.389871411510756,
+          "meanRaPressure": 3.3378222496651824,
+          "meanPulmonaryPressure": 17.30478666800247,
+          "lvEndDiastolicPressure": 8.569475696970526,
+          "peakLvPressure": 118.32504333486268,
+          "regurgitantVolume": 0,
+          "regurgitantFraction": 0,
+          "peakAorticGradient": 13.976952004414699,
+          "meanAorticGradient": 6.6352621644319,
+          "pulmonaryStrokeVolume": 72.76643878049404
+        },
+        "diagnostics": {
+          "converged": true,
+          "cycles": 41,
+          "periodicResidualMl": 0.0008194517404263024,
+          "modelWithinDomain": true,
+          "minActivePassiveMarginMmHg": 22.705261860824507,
+          "simultaneousLeftValveFlowFraction": 0,
+          "simultaneousRightValveFlowFraction": 0,
+          "volumeErrorMl": 9.731593308970332e-11,
+          "minVolumeMl": 29.06778638675831,
+          "stepSizeSeconds": 0.0005,
+          "warnings": []
+        }
+      },
+      "relativeErrors": {
+        "cardiacOutput": 0.00005700881881320834,
+        "edv": 3.7221462581229816e-7,
+        "esv": 0.0000023027216549247143,
+        "ejectionFraction": 0.0000016624486780300861,
+        "meanArterialPressure": 0.0000012630140095867155,
+        "peakLvPressure": 8.595863531688212e-7,
+        "peakAorticGradient": 0.000009044477004752585
+      },
+      "maximumRelativeError": 0.00005700881881320834,
+      "acceptanceTolerance": 0.002
+    },
+    "hfref": {
+      "fine": {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 75,
+          "contractility": 1,
+          "diastolicStiffness": 1,
+          "systemicResistance": 1,
+          "bloodVolume": 5000,
+          "severity": 0.7
+        },
+        "metrics": {
+          "edv": 157.6522559341794,
+          "esv": 97.0940650025814,
+          "strokeVolume": 60.558190931598006,
+          "forwardStrokeVolume": 60.55866452390986,
+          "ejectionFraction": 0.38412511494209983,
+          "cardiacOutput": 4.541899839293239,
+          "meanArterialPressure": 80.7272183359411,
+          "systolicPressure": 97.0087489366834,
+          "diastolicPressure": 64.66218442637637,
+          "meanLaPressure": 10.250513018423545,
+          "meanRaPressure": 2.7587647476797765,
+          "meanPulmonaryPressure": 19.33433058640956,
+          "lvEndDiastolicPressure": 15.861554493050141,
+          "peakLvPressure": 99.24576453149253,
+          "regurgitantVolume": 0,
+          "regurgitantFraction": 0,
+          "peakAorticGradient": 10.006856307315118,
+          "meanAorticGradient": 5.860515921668686,
+          "pulmonaryStrokeVolume": 60.55894827671873
+        },
+        "diagnostics": {
+          "converged": true,
+          "cycles": 47,
+          "periodicResidualMl": 0.0009849886137089925,
+          "modelWithinDomain": true,
+          "minActivePassiveMarginMmHg": 24.0290392684485,
+          "simultaneousLeftValveFlowFraction": 0,
+          "simultaneousRightValveFlowFraction": 0,
+          "volumeErrorMl": 3.183231456205249e-11,
+          "minVolumeMl": 27.541834300341396,
+          "stepSizeSeconds": 0.0005,
+          "warnings": []
+        }
+      },
+      "relativeErrors": {
+        "cardiacOutput": 0.00004162825375839802,
+        "edv": 1.3531665089858583e-7,
+        "esv": 0.0000012851564578407447,
+        "ejectionFraction": 0.000001843559629965063,
+        "meanArterialPressure": 0.000001668100466841699,
+        "peakLvPressure": 0.0000014077998643140021,
+        "peakAorticGradient": 0.000006224481862038034
+      },
+      "maximumRelativeError": 0.00004162825375839802,
+      "acceptanceTolerance": 0.002
+    },
+    "hfpef": {
+      "fine": {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 75,
+          "contractility": 1,
+          "diastolicStiffness": 1,
+          "systemicResistance": 1,
+          "bloodVolume": 5000,
+          "severity": 0.7
+        },
+        "metrics": {
+          "edv": 102.33375599927038,
+          "esv": 48.728653124750615,
+          "strokeVolume": 53.605102874519766,
+          "forwardStrokeVolume": 53.60449979391629,
+          "ejectionFraction": 0.5238262032999351,
+          "cardiacOutput": 4.020337484543721,
+          "meanArterialPressure": 71.55545024708388,
+          "systolicPressure": 85.25679258428961,
+          "diastolicPressure": 57.48902502569543,
+          "meanLaPressure": 14.073473311368875,
+          "meanRaPressure": 2.5389605906187707,
+          "meanPulmonaryPressure": 22.11433445512342,
+          "lvEndDiastolicPressure": 24.445789498548333,
+          "peakLvPressure": 87.0101244621449,
+          "regurgitantVolume": 0,
+          "regurgitantFraction": 0,
+          "peakAorticGradient": 8.301413811291624,
+          "meanAorticGradient": 4.5172331287008,
+          "pulmonaryStrokeVolume": 53.60524683297524
+        },
+        "diagnostics": {
+          "converged": true,
+          "cycles": 65,
+          "periodicResidualMl": 0.0009206202375935391,
+          "modelWithinDomain": true,
+          "minActivePassiveMarginMmHg": 26.415597872523126,
+          "simultaneousLeftValveFlowFraction": 0,
+          "simultaneousRightValveFlowFraction": 0,
+          "volumeErrorMl": 4.001776687800884e-11,
+          "minVolumeMl": 26.17471976518984,
+          "stepSizeSeconds": 0.0005,
+          "warnings": []
+        }
+      },
+      "relativeErrors": {
+        "cardiacOutput": 0.00006287581391394615,
+        "edv": 6.292338986401758e-7,
+        "esv": 0.0000011580637172369227,
+        "ejectionFraction": 0.0000016247063449174396,
+        "meanArterialPressure": 0.000002130577141888774,
+        "peakLvPressure": 1.8403828484653605e-7,
+        "peakAorticGradient": 0.000032244545327586464
+      },
+      "maximumRelativeError": 0.00006287581391394615,
+      "acceptanceTolerance": 0.002
+    },
+    "aortic-stenosis": {
+      "fine": {
+        "parameters": {
+          "scenario": "aortic-stenosis",
+          "heartRate": 75,
+          "contractility": 1,
+          "diastolicStiffness": 1,
+          "systemicResistance": 1,
+          "bloodVolume": 5000,
+          "severity": 0.7
+        },
+        "metrics": {
+          "edv": 143.31169648068112,
+          "esv": 74.30205187779397,
+          "strokeVolume": 69.00964460288715,
+          "forwardStrokeVolume": 69.00966205532599,
+          "ejectionFraction": 0.48153532682651534,
+          "cardiacOutput": 5.175724654149449,
+          "meanArterialPressure": 91.99889552977012,
+          "systolicPressure": 110.04421980121181,
+          "diastolicPressure": 75.30073861993803,
+          "meanLaPressure": 7.4968407933227,
+          "meanRaPressure": 3.1488053865864827,
+          "meanPulmonaryPressure": 17.84819694363734,
+          "lvEndDiastolicPressure": 10.673058054387903,
+          "peakLvPressure": 178.9057827791835,
+          "regurgitantVolume": 0,
+          "regurgitantFraction": 0,
+          "peakAorticGradient": 85.6312450035416,
+          "meanAorticGradient": 55.48171341420748,
+          "pulmonaryStrokeVolume": 69.00886254024293
+        },
+        "diagnostics": {
+          "converged": true,
+          "cycles": 43,
+          "periodicResidualMl": 0.0009583281689629075,
+          "modelWithinDomain": true,
+          "minActivePassiveMarginMmHg": 23.036239473177616,
+          "simultaneousLeftValveFlowFraction": 0,
+          "simultaneousRightValveFlowFraction": 0,
+          "volumeErrorMl": 2.546585164964199e-11,
+          "minVolumeMl": 28.777346171475806,
+          "stepSizeSeconds": 0.0005,
+          "warnings": []
+        }
+      },
+      "relativeErrors": {
+        "cardiacOutput": 0.000006781434107726929,
+        "edv": 3.745496718388235e-7,
+        "esv": 4.3374737070084745e-8,
+        "ejectionFraction": 4.49975212229664e-7,
+        "meanArterialPressure": 8.085079225454395e-7,
+        "peakLvPressure": 1.4262680163830446e-7,
+        "peakAorticGradient": 0.000018026413812919583
+      },
+      "maximumRelativeError": 0.000018026413812919583,
+      "acceptanceTolerance": 0.002
+    },
+    "mitral-regurgitation": {
+      "fine": {
+        "parameters": {
+          "scenario": "mitral-regurgitation",
+          "heartRate": 75,
+          "contractility": 1,
+          "diastolicStiffness": 1,
+          "systemicResistance": 1,
+          "bloodVolume": 5000,
+          "severity": 0.7
+        },
+        "metrics": {
+          "edv": 149.46085960464242,
+          "esv": 47.157964741968165,
+          "strokeVolume": 102.30289486267426,
+          "forwardStrokeVolume": 64.76271960936505,
+          "ejectionFraction": 0.684479502749338,
+          "cardiacOutput": 4.857203970702379,
+          "meanArterialPressure": 86.3486232882622,
+          "systolicPressure": 104.20781740708564,
+          "diastolicPressure": 68.67522273828779,
+          "meanLaPressure": 9.282511545776657,
+          "meanRaPressure": 2.96860692562302,
+          "meanPulmonaryPressure": 18.9965912042148,
+          "lvEndDiastolicPressure": 12.402681023493885,
+          "peakLvPressure": 106.80698449282514,
+          "regurgitantVolume": 37.54191995625545,
+          "regurgitantFraction": 0.36696204703575747,
+          "peakAorticGradient": 13.909096494161972,
+          "meanAorticGradient": 6.7461166259755325,
+          "pulmonaryStrokeVolume": 64.75978921229276
+        },
+        "diagnostics": {
+          "converged": true,
+          "cycles": 41,
+          "periodicResidualMl": 0.0008383703229810635,
+          "modelWithinDomain": true,
+          "minActivePassiveMarginMmHg": 23.86047487261748,
+          "simultaneousLeftValveFlowFraction": 0,
+          "simultaneousRightValveFlowFraction": 0,
+          "volumeErrorMl": 3.9108272176235914e-11,
+          "minVolumeMl": 28.664005546432854,
+          "stepSizeSeconds": 0.0005,
+          "warnings": []
+        }
+      },
+      "relativeErrors": {
+        "cardiacOutput": 0.00000944803598218144,
+        "edv": 9.198497455052418e-7,
+        "esv": 9.381564241034799e-7,
+        "ejectionFraction": 8.4387297867161e-9,
+        "meanArterialPressure": 1.486244722744726e-7,
+        "peakLvPressure": 0.0000029749183264198504,
+        "peakAorticGradient": 0.000011398009069370595
+      },
+      "maximumRelativeError": 0.000011398009069370595,
+      "acceptanceTolerance": 0.002
+    }
+  },
+  "cornerSweep": {
+    "count": 160,
+    "maximumCycles": 117,
+    "maximumVolumeErrorMl": 1.2641976354643703e-10,
+    "minimumVolumeMl": 12.077680777205952,
+    "outOfDomain": [
+      {
+        "parameters": {
+          "scenario": "normal",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "normal",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 0.7,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 4500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 1.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Passive ventricular pressure exceeds the peak active relation. Activation would reduce pressure at fixed volume: this parameter combination is outside the supported model domain.",
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 120,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Passive ventricular pressure exceeds the peak active relation. Activation would reduce pressure at fixed volume: this parameter combination is outside the supported model domain.",
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfref",
+          "heartRate": 120,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 1.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Passive ventricular pressure exceeds the peak active relation. Activation would reduce pressure at fixed volume: this parameter combination is outside the supported model domain.",
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 4500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 4500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 0.7,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 1.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 1.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 120,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 120,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 1.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "hfpef",
+          "heartRate": 120,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "aortic-stenosis",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "aortic-stenosis",
+          "heartRate": 120,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "mitral-regurgitation",
+          "heartRate": 50,
+          "contractility": 0.6,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      },
+      {
+        "parameters": {
+          "scenario": "mitral-regurgitation",
+          "heartRate": 50,
+          "contractility": 1.4,
+          "diastolicStiffness": 1.5,
+          "systemicResistance": 0.6,
+          "bloodVolume": 5500,
+          "severity": 1
+        },
+        "reasons": [
+          "Simultaneous forward filling and ejection occur. Volume-extremum stroke volume and EF no longer describe all ventricular throughput; this parameter combination is outside the supported interpretation domain."
+        ]
+      }
+    ],
+    "failures": []
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-23",
+  "scope": "Educational source-atlas deformation and synthetic leaflet animation; not biomechanical validation",
+  "automated": {
+    "check": "passed",
+    "tests": {
+      "python": 10,
+      "physiology": 16,
+      "flow": 9,
+      "motion": 22
+    },
+    "totalTests": 57,
+    "release": "expected failure: assets lack anatomy/distribution approval and signed review evidence",
+    "log": ".local/motion-evidence/check.log"
+  },
+  "source": {
+    "hraSha256": "d0d261297693ed432727d0ea6cc2313eaa43500abe79a7d3ab63ed96dd5f29ce",
+    "enginePreserved": true,
+    "blenderGui": "read blocked by another client lock; no edits",
+    "bpy": "unchanged; blender:check not rerun"
+  },
+  "browser": {
+    "url": "http://127.0.0.1:5173/",
+    "desktopViewport": [
+      1440,
+      1050
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "mobileDocumentWidth": 390,
+    "finalViewportWidth": 641,
+    "finalState": "baseline, all44structures, LVselected, flow+motion enabled, playing0.5x",
+    "checks": [
+      "baseline LV maximum/minimum display contraction",
+      "all four valve opening poses and MV/AV closed poses",
+      "MR negative flow residual gap at72ms, −108.3mL/s",
+      "flowoff retains playing heart",
+      "hide/show, label, opacity, clipping",
+      "native mesh pick, drag rotate, wheel zoom, reset",
+      "mobile controls fit, WebGL render",
+      "no console errors; preexisting THREE.Clock deprecation warning"
+    ],
+    "pixelEquality": [
+      {
+        "a": ".local/motion-evidence/paused-contraction-a.png",
+        "b": ".local/motion-evidence/paused-contraction-b.png",
+        "equal": true
+      },
+      {
+        "a": ".local/motion-evidence/original-at-filling.png",
+        "b": ".local/motion-evidence/original-at-ejection-settled.png",
+        "equal": true
+      },
+      {
+        "a": ".local/motion-evidence/flow-contraction-paused-a.png",
+        "b": ".local/motion-evidence/flow-contraction-paused-b.png",
+        "equal": true
+      }
+    ],
+    "screenshots": [
+      {
+        "path": ".local/motion-evidence/aortic-closed.png",
+        "sha256": "5b8e24801128d5eae1299d2f837d455c014bae517fcebb97ed2a13abdb415b1d"
+      },
+      {
+        "path": ".local/motion-evidence/aortic-open.png",
+        "sha256": "e2b4be1107469a2d9fbfa5070865aca6e5fca30f98851c14214a10271209515c"
+      },
+      {
+        "path": ".local/motion-evidence/contracted-clipped.png",
+        "sha256": "75553a345411f68bf917b320b8fe5e15563a59689fab3d0eccb264be3b2ea9f4"
+      },
+      {
+        "path": ".local/motion-evidence/contracted-heart.png",
+        "sha256": "6b2f3bcda55ac1152018282fb5791a8f9b0b6e5351996cff6bfb53d236c9d6c7"
+      },
+      {
+        "path": ".local/motion-evidence/final-preview.png",
+        "sha256": "f3869f9ba0997279f5c0f27a53399303509397ee729542906b07cd89af5c052e"
+      },
+      {
+        "path": ".local/motion-evidence/flow-contraction-paused-a.png",
+        "sha256": "1fb85dacc75e72c4e7ccb53f512e0241a45de9cbc13f713896682404be3981d5"
+      },
+      {
+        "path": ".local/motion-evidence/flow-contraction-paused-b.png",
+        "sha256": "1fb85dacc75e72c4e7ccb53f512e0241a45de9cbc13f713896682404be3981d5"
+      },
+      {
+        "path": ".local/motion-evidence/full-heart.png",
+        "sha256": "2af449dba41e9184e5b777b7a5ba886987edd112cd6c0c8bd1bfc59e622f3ee2"
+      },
+      {
+        "path": ".local/motion-evidence/heart-only-playing-a.png",
+        "sha256": "1691313740266cba2d37dc3ac2026840561ac98cad5dea756a41dedf1b60fb64"
+      },
+      {
+        "path": ".local/motion-evidence/heart-only-playing-b.png",
+        "sha256": "d2eeff1de3e5f1f0e2c027ff82df79f78cc4a94d485c31607e7917617962bacf"
+      },
+      {
+        "path": ".local/motion-evidence/hidden-valve.png",
+        "sha256": "a8a644ffb0d34bb07aba37674250992c0b462e3750ce6ac8d2b37081403a04f0"
+      },
+      {
+        "path": ".local/motion-evidence/internal-motion-overview.png",
+        "sha256": "2e0fd96a3713a0ee1cd88b0f4b6b8212e2a084f4bc674ecc49e9d16cac821ced"
+      },
+      {
+        "path": ".local/motion-evidence/mitral-closed.png",
+        "sha256": "aa8571c3474ed01e67554138bc6513a6f0c5643ec5abd33279a346dbc1f83d90"
+      },
+      {
+        "path": ".local/motion-evidence/mitral-label.png",
+        "sha256": "88fce3c95cfe9d5d0639d87803dc88c1b8956ecbee6d78872c120c205f843703"
+      },
+      {
+        "path": ".local/motion-evidence/mitral-open.png",
+        "sha256": "9fff3f566610e4b4723abf9d79a88d746027502998ca46c9aab311cb2a7d33e3"
+      },
+      {
+        "path": ".local/motion-evidence/mitral-regurgitation-gap.png",
+        "sha256": "78bb172274b1d86cff50a107af536cedea87d0722dffebfe333cb8efff17f53a"
+      },
+      {
+        "path": ".local/motion-evidence/mobile-full.png",
+        "sha256": "c14ddc704efc1f812a5407060ca0c0a4f8e6fed8916b30cdbc23afa2cf86c607"
+      },
+      {
+        "path": ".local/motion-evidence/mobile-viewport.png",
+        "sha256": "cbee53ab381c0d2517f0bb363c744aca47315028a4798a440ede6326e42d911f"
+      },
+      {
+        "path": ".local/motion-evidence/original-at-ejection-settled.png",
+        "sha256": "46089bb73facd2be79b077246f9391858b03ac09b670881a86020000165b3273"
+      },
+      {
+        "path": ".local/motion-evidence/original-at-ejection.png",
+        "sha256": "ce00406142589c0b5e7145a8efd98cf02d7977deed3e997679ed7ee67d564cd0"
+      },
+      {
+        "path": ".local/motion-evidence/original-at-filling.png",
+        "sha256": "46089bb73facd2be79b077246f9391858b03ac09b670881a86020000165b3273"
+      },
+      {
+        "path": ".local/motion-evidence/paused-contraction-a.png",
+        "sha256": "6b2f3bcda55ac1152018282fb5791a8f9b0b6e5351996cff6bfb53d236c9d6c7"
+      },
+      {
+        "path": ".local/motion-evidence/paused-contraction-b.png",
+        "sha256": "6b2f3bcda55ac1152018282fb5791a8f9b0b6e5351996cff6bfb53d236c9d6c7"
+      },
+      {
+        "path": ".local/motion-evidence/pulmonary-open.png",
+        "sha256": "77f78d78baad2458d8e0dd76ca2c49b5f56eaf4c3359dbc04eccae6f97843ca7"
+      },
+      {
+        "path": ".local/motion-evidence/rotated-contracted.png",
+        "sha256": "7175c67ff513dd83074c1cb282486ce71e1a8c7d91ba8ef46fe87aaec4df725f"
+      },
+      {
+        "path": ".local/motion-evidence/tricuspid-open.png",
+        "sha256": "4116ddcfeaf21a8822a05f3cc64ca2b3827ae8c142d4a023284d98e7ccc4f675"
+      },
+      {
+        "path": ".local/motion-evidence/valve-opacity-25.png",
+        "sha256": "c128e20130b6f889ada607ab346dbe7746a2ce730f4503b317698ee6676e1854"
+      },
+      {
+        "path": ".local/motion-evidence/valve-opacity-focused.png",
+        "sha256": "d03524602c434b780743477a3bdcdc8f364630f4c77871c57605c6574ed70410"
+      },
+      {
+        "path": ".local/motion-evidence/zoomed-contracted.png",
+        "sha256": "772f0ef70636082f0260a618b2cd29d2c3c7806bc29a62de81a1dcfe5c1528ee"
+      }
+    ]
+  },
+  "unperformed": [
+    "expert anatomy/motion/valve review",
+    "patient cine MRI/echo comparison",
+    "CFD/FSI/contact mechanics",
+    "quantitative browser FPS/memory profiling"
+  ]
+}

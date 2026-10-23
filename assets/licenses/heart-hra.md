@@ -1,0 +1,12 @@
+# HRA male cardiac atlas subset — attribution and evidence
+
+Source: **Human Reference Atlas / HuBMAP**, reference organs v1.3. Creator: **Kristen Browne**; dataset citations credit **Kristen Browne and Heidi Schlehlein (2024)**. License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). Original versioned records explicitly identify CC-BY-4.0:
+
+- [Heart, Male v1.3 metadata](https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/metadata.json), [DOI](https://doi.org/10.48539/HBM564.WKNG.249).
+- [Blood Vasculature, Male v1.3 metadata](https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/metadata.json), [DOI](https://doi.org/10.48539/HBM473.XTPP.725).
+
+Retrieved 2026-10-23. Exact asset URLs, pinned SHA-256 hashes, citations and original metadata/crosswalk URLs are in `assets/sources/heart-hra.json`. Acquisition uses public versioned GLBs, not clinical images or private patient records. These are Visible Human-based atlas reconstructions, not this project's direct medical image segmentation.
+
+Changes: selected 14 heart and 30 matching male vasculature source meshes, added semantic identifiers and provenance; glTF → Blender → glTF axis roundtrip. Original coordinates and all nonduplicate oriented triangles are retained. Blender's automatic mesh validation removes exactly **18 duplicate-index faces: RA 12, LM 5, SVC 1**, keeping one original winding per duplicate-index group. The selected source's **267,360 triangles become 267,342 output triangles**, with **zero observed coordinate deviation**. The output still contains **835 zero-area faces: RA 812, LM 6, SVC 17**. This narrowly recorded importer cleanup is not anatomical repair or a claim that all topology is unchanged. No smoothing, remeshing, nonuniform scaling, invented anatomy, textures or motion. Browser colors are illustrative material presets. Source label conflicts and remaining mesh defects require review. Source reviewers listed upstream are **not** project reviewers and do not approve this derivative.
+
+CC BY 4.0 permits sharing and adaptation with attribution, license link and indication of changes; no endorsement is implied. Keep this notice and source links with any permitted downstream use. The repository's project distribution gate remains **internal-only / anatomy unreviewed** pending the expert and distribution review in `docs/anatomy-and-licensing.md`. A source license does not establish medical accuracy or authorize a claim of clinical validation.

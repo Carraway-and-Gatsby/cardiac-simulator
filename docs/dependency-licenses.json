@@ -1,0 +1,1157 @@
+{
+  "basis": "package-lock.json includes optional platform packages; installed metadata and LICENSE files used when available; not legal approval or a complete bundled-asset audit",
+  "packages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.10",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@babel/runtime",
+      "licenseEvidence": "node_modules/@babel/runtime/LICENSE"
+    },
+    {
+      "name": "@dimforge/rapier3d-compat",
+      "version": "0.12.0",
+      "license": "Apache-2.0",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@dimforge/rapier3d-compat",
+      "licenseEvidence": "node_modules/@dimforge/rapier3d-compat/LICENSE"
+    },
+    {
+      "name": "@mediapipe/tasks-vision",
+      "version": "0.10.17",
+      "license": "Apache-2.0",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@mediapipe/tasks-vision",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@monogrid/gainmap-js",
+      "version": "3.4.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@monogrid/gainmap-js",
+      "licenseEvidence": "node_modules/@monogrid/gainmap-js/LICENSE"
+    },
+    {
+      "name": "@oxc-project/types",
+      "version": "0.154.0",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/@oxc-project/types",
+      "licenseEvidence": "node_modules/@oxc-project/types/LICENSE"
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.7.9",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@react-three/drei",
+      "licenseEvidence": "node_modules/@react-three/drei/LICENSE"
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.8.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@react-three/fiber",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-android-arm-eabi",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-android-arm-eabi",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-android-arm64",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-android-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-darwin-arm64",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/@rolldown/binding-darwin-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-darwin-x64",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-darwin-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-freebsd-x64",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-freebsd-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-arm64-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-arm64-musl",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-s390x-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-x64-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-musl",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-linux-x64-musl",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-openharmony-arm64",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-openharmony-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-win32-arm64-msvc",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@rolldown/binding-win32-x64-msvc",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.1",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/@rolldown/pluginutils",
+      "licenseEvidence": "node_modules/@rolldown/pluginutils/LICENSE"
+    },
+    {
+      "name": "@tweenjs/tween.js",
+      "version": "23.1.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@tweenjs/tween.js",
+      "licenseEvidence": "node_modules/@tweenjs/tween.js/LICENSE"
+    },
+    {
+      "name": "@types/draco3d",
+      "version": "1.4.10",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/draco3d",
+      "licenseEvidence": "node_modules/@types/draco3d/LICENSE"
+    },
+    {
+      "name": "@types/offscreencanvas",
+      "version": "2019.7.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/offscreencanvas",
+      "licenseEvidence": "node_modules/@types/offscreencanvas/LICENSE"
+    },
+    {
+      "name": "@types/react",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/react",
+      "licenseEvidence": "node_modules/@types/react/LICENSE"
+    },
+    {
+      "name": "@types/react-dom",
+      "version": "19.3.0",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/@types/react-dom",
+      "licenseEvidence": "node_modules/@types/react-dom/LICENSE"
+    },
+    {
+      "name": "@types/react-reconciler",
+      "version": "0.28.9",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/react-reconciler",
+      "licenseEvidence": "node_modules/@types/react-reconciler/LICENSE"
+    },
+    {
+      "name": "@types/stats.js",
+      "version": "0.17.4",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/stats.js",
+      "licenseEvidence": "node_modules/@types/stats.js/LICENSE"
+    },
+    {
+      "name": "@types/three",
+      "version": "0.186.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/three",
+      "licenseEvidence": "node_modules/@types/three/LICENSE"
+    },
+    {
+      "name": "@types/webxr",
+      "version": "0.5.24",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@types/webxr",
+      "licenseEvidence": "node_modules/@types/webxr/LICENSE"
+    },
+    {
+      "name": "@typescript/typescript-aix-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-aix-ppc64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/@typescript/typescript-darwin-arm64",
+      "licenseEvidence": "node_modules/@typescript/typescript-darwin-arm64/LICENSE"
+    },
+    {
+      "name": "@typescript/typescript-darwin-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-darwin-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-freebsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-freebsd-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-freebsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-freebsd-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-arm",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-arm",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-loong64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-loong64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-mips64el",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-mips64el",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-ppc64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-riscv64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-riscv64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-s390x",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-s390x",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-linux-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-netbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-netbsd-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-netbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-netbsd-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-openbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-openbsd-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-openbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-openbsd-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-sunos-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-sunos-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-win32-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-win32-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@typescript/typescript-win32-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/@typescript/typescript-win32-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "@use-gesture/core",
+      "version": "10.3.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@use-gesture/core",
+      "licenseEvidence": "node_modules/@use-gesture/core/LICENSE"
+    },
+    {
+      "name": "@use-gesture/react",
+      "version": "10.3.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/@use-gesture/react",
+      "licenseEvidence": "node_modules/@use-gesture/react/LICENSE"
+    },
+    {
+      "name": "base64-js",
+      "version": "1.5.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/base64-js",
+      "licenseEvidence": "node_modules/base64-js/LICENSE"
+    },
+    {
+      "name": "bidi-js",
+      "version": "1.1.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/bidi-js",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "buffer",
+      "version": "6.0.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/buffer",
+      "licenseEvidence": "node_modules/buffer/LICENSE"
+    },
+    {
+      "name": "camera-controls",
+      "version": "3.1.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/camera-controls",
+      "licenseEvidence": "node_modules/camera-controls/LICENSE"
+    },
+    {
+      "name": "cross-env",
+      "version": "7.0.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/cross-env",
+      "licenseEvidence": "node_modules/cross-env/LICENSE"
+    },
+    {
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/cross-spawn",
+      "licenseEvidence": "node_modules/cross-spawn/LICENSE"
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/csstype",
+      "licenseEvidence": "node_modules/csstype/LICENSE"
+    },
+    {
+      "name": "detect-gpu",
+      "version": "5.0.70",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/detect-gpu",
+      "licenseEvidence": "node_modules/detect-gpu/LICENSE"
+    },
+    {
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/detect-libc",
+      "licenseEvidence": "node_modules/detect-libc/LICENSE"
+    },
+    {
+      "name": "draco3d",
+      "version": "1.5.7",
+      "license": "Apache-2.0",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/draco3d",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/fdir",
+      "licenseEvidence": "node_modules/fdir/LICENSE"
+    },
+    {
+      "name": "fflate",
+      "version": "0.8.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/fflate",
+      "licenseEvidence": "node_modules/fflate/LICENSE"
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/fsevents",
+      "licenseEvidence": "node_modules/fsevents/LICENSE"
+    },
+    {
+      "name": "glsl-noise",
+      "version": "0.0.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/glsl-noise",
+      "licenseEvidence": "node_modules/glsl-noise/LICENSE"
+    },
+    {
+      "name": "hls.js",
+      "version": "1.7.3",
+      "license": "Apache-2.0",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/hls.js",
+      "licenseEvidence": "node_modules/hls.js/LICENSE"
+    },
+    {
+      "name": "ieee754",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/ieee754",
+      "licenseEvidence": "node_modules/ieee754/LICENSE"
+    },
+    {
+      "name": "immediate",
+      "version": "3.0.6",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/immediate",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "is-promise",
+      "version": "2.2.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/is-promise",
+      "licenseEvidence": "node_modules/is-promise/LICENSE"
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0",
+      "license": "ISC",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/isexe",
+      "licenseEvidence": "node_modules/isexe/LICENSE"
+    },
+    {
+      "name": "its-fine",
+      "version": "2.1.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/its-fine",
+      "licenseEvidence": "node_modules/its-fine/LICENSE"
+    },
+    {
+      "name": "lie",
+      "version": "3.3.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/lie",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/lightningcss",
+      "licenseEvidence": "node_modules/lightningcss/LICENSE"
+    },
+    {
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-android-arm64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/lightningcss-darwin-arm64",
+      "licenseEvidence": "node_modules/lightningcss-darwin-arm64/LICENSE"
+    },
+    {
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-darwin-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-freebsd-x64",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-linux-arm-gnueabihf",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-linux-arm64-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-linux-arm64-musl",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-linux-x64-gnu",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-linux-x64-musl",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-win32-arm64-msvc",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "license": "MPL-2.0",
+      "developmentOnly": true,
+      "installed": false,
+      "packagePath": "node_modules/lightningcss-win32-x64-msvc",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "maath",
+      "version": "0.10.8",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/maath",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "meshline",
+      "version": "3.3.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/meshline",
+      "licenseEvidence": "node_modules/meshline/LICENSE"
+    },
+    {
+      "name": "meshoptimizer",
+      "version": "1.1.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/meshoptimizer",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/nanoid",
+      "licenseEvidence": "node_modules/nanoid/LICENSE"
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/path-key",
+      "licenseEvidence": "node_modules/path-key/LICENSE"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/picocolors",
+      "licenseEvidence": "node_modules/picocolors/LICENSE"
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/picomatch",
+      "licenseEvidence": "node_modules/picomatch/LICENSE"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.30",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/postcss",
+      "licenseEvidence": "node_modules/postcss/LICENSE"
+    },
+    {
+      "name": "potpack",
+      "version": "1.0.2",
+      "license": "ISC",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/potpack",
+      "licenseEvidence": "node_modules/potpack/LICENSE"
+    },
+    {
+      "name": "promise-worker-transferable",
+      "version": "1.0.4",
+      "license": "Apache-2.0",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/promise-worker-transferable",
+      "licenseEvidence": "node_modules/promise-worker-transferable/LICENSE"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/react",
+      "licenseEvidence": "node_modules/react/LICENSE"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/react-dom",
+      "licenseEvidence": "node_modules/react-dom/LICENSE"
+    },
+    {
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/react-use-measure",
+      "licenseEvidence": "node_modules/react-use-measure/LICENSE"
+    },
+    {
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/require-from-string",
+      "licenseEvidence": "node_modules/require-from-string/LICENSE"
+    },
+    {
+      "name": "rolldown",
+      "version": "1.2.14",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/rolldown",
+      "licenseEvidence": "node_modules/rolldown/LICENSE"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/scheduler",
+      "licenseEvidence": "node_modules/scheduler/LICENSE"
+    },
+    {
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/shebang-command",
+      "licenseEvidence": "node_modules/shebang-command/LICENSE"
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/shebang-regex",
+      "licenseEvidence": "node_modules/shebang-regex/LICENSE"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/source-map-js",
+      "licenseEvidence": "node_modules/source-map-js/LICENSE"
+    },
+    {
+      "name": "stats-gl",
+      "version": "2.4.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/stats-gl",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "three",
+      "version": "0.170.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/stats-gl/node_modules/three",
+      "licenseEvidence": "node_modules/stats-gl/node_modules/three/LICENSE"
+    },
+    {
+      "name": "stats.js",
+      "version": "0.17.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/stats.js",
+      "licenseEvidence": "node_modules/stats.js/LICENSE"
+    },
+    {
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/suspend-react",
+      "licenseEvidence": "node_modules/suspend-react/LICENSE"
+    },
+    {
+      "name": "three",
+      "version": "0.186.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/three",
+      "licenseEvidence": "node_modules/three/LICENSE"
+    },
+    {
+      "name": "three-mesh-bvh",
+      "version": "0.8.3",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/three-mesh-bvh",
+      "licenseEvidence": "node_modules/three-mesh-bvh/LICENSE"
+    },
+    {
+      "name": "three-stdlib",
+      "version": "2.36.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/three-stdlib",
+      "licenseEvidence": "node_modules/three-stdlib/LICENSE"
+    },
+    {
+      "name": "fflate",
+      "version": "0.6.11",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/three-stdlib/node_modules/fflate",
+      "licenseEvidence": "node_modules/three-stdlib/node_modules/fflate/LICENSE"
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/tinyglobby",
+      "licenseEvidence": "node_modules/tinyglobby/LICENSE"
+    },
+    {
+      "name": "troika-three-text",
+      "version": "0.52.5",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/troika-three-text",
+      "licenseEvidence": "node_modules/troika-three-text/LICENSE"
+    },
+    {
+      "name": "troika-three-utils",
+      "version": "0.52.5",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/troika-three-utils",
+      "licenseEvidence": "node_modules/troika-three-utils/LICENSE"
+    },
+    {
+      "name": "troika-worker-utils",
+      "version": "0.52.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/troika-worker-utils",
+      "licenseEvidence": "node_modules/troika-worker-utils/LICENSE"
+    },
+    {
+      "name": "tunnel-rat",
+      "version": "0.1.2",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/tunnel-rat",
+      "licenseEvidence": "node_modules/tunnel-rat/LICENSE"
+    },
+    {
+      "name": "zustand",
+      "version": "4.5.7",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/tunnel-rat/node_modules/zustand",
+      "licenseEvidence": "node_modules/tunnel-rat/node_modules/zustand/LICENSE"
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/typescript",
+      "licenseEvidence": "node_modules/typescript/LICENSE"
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/use-sync-external-store",
+      "licenseEvidence": "node_modules/use-sync-external-store/LICENSE"
+    },
+    {
+      "name": "utility-types",
+      "version": "3.11.0",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/utility-types",
+      "licenseEvidence": "node_modules/utility-types/LICENSE"
+    },
+    {
+      "name": "vite",
+      "version": "8.3.4",
+      "license": "MIT",
+      "developmentOnly": true,
+      "installed": true,
+      "packagePath": "node_modules/vite",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "webgl-constants",
+      "version": "1.1.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/webgl-constants",
+      "licenseEvidence": "node_modules/webgl-constants/LICENSE"
+    },
+    {
+      "name": "webgl-sdf-generator",
+      "version": "1.1.1",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/webgl-sdf-generator",
+      "licenseEvidence": "package metadata; review package contents before redistribution"
+    },
+    {
+      "name": "which",
+      "version": "2.0.2",
+      "license": "ISC",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/which",
+      "licenseEvidence": "node_modules/which/LICENSE"
+    },
+    {
+      "name": "zustand",
+      "version": "5.0.15",
+      "license": "MIT",
+      "developmentOnly": false,
+      "installed": true,
+      "packagePath": "node_modules/zustand",
+      "licenseEvidence": "node_modules/zustand/LICENSE"
+    }
+  ]
+}

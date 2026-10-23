@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "heart-hra-male-v1",
+  "downloadedAt": "2026-10-23",
+  "usage": "internal-only pending project anatomical review",
+  "evidence": "atlas-reconstruction",
+  "sources": [
+    {
+      "key": "heart",
+      "path": ".local/anatomy-sources/hra/heart-male-v1.3.glb",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/assets/3d-vh-m-heart.glb",
+      "sha256": "689df039c8bc264ea06a44cd926762976f0666c0ff2dc532d046409b185e6b0c",
+      "bytes": 4071772,
+      "version": "v1.3",
+      "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/metadata.json",
+      "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/assets/crosswalk.csv",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "creators": [
+        "Kristen Browne"
+      ],
+      "citation": "Browne, Kristen, and Heidi Schlehlein. 2024. \"3D Reference Organ for Heart, Male v1.3.\" https://doi.org/10.48539/HBM564.WKNG.249. Accessed on June 15, 2024.",
+      "sourceReviewers": [
+        "Shin Lin"
+      ],
+      "projectReviewers": [],
+      "selectionReason": "Selected whole, discrete source nodes in cardiac and proximal great-vessel scope. Distal body vessels excluded; no cropping.",
+      "excludeNodes": []
+    },
+    {
+      "key": "vasculature",
+      "path": ".local/anatomy-sources/hra/blood-vasculature-male-v1.3.glb",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/assets/3d-vh-m-blood-vasculature.glb",
+      "sha256": "3a9fe60549769f3a27c15a0901a055e7c4fd3a9f4a37f39a77f5047f0166d4c3",
+      "bytes": 18050040,
+      "version": "v1.3",
+      "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/metadata.json",
+      "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/assets/crosswalk.csv",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "creators": [
+        "Kristen Browne",
+        "Heidi Schlehlein"
+      ],
+      "citation": "Browne, Kristen,\tand Heidi Schlehlein.\t 2024.\t\"3D Reference Organ for Blood Vasculature, Male v1.3.\"\t https://doi.org/10.48539/HBM473.XTPP.725.\tAccessed June 15, 2024.",
+      "sourceReviewers": [
+        "Marc Halushka",
+        "Shin Lin"
+      ],
+      "projectReviewers": [],
+      "selectionReason": "Selected whole, discrete source nodes in cardiac and proximal great-vessel scope. Distal body vessels excluded; no cropping.",
+      "excludeNodes": []
+    }
+  ],
+  "sourceCoordinateSystem": "glTF right-handed Y-up",
+  "sourceUnits": "metres",
+  "transformationPolicy": "Preserve source coordinates and all nonduplicate oriented triangles through glTF import/export axis conversion. Documented exception: Blender mesh validation automatically removes 18 duplicate-index faces (RA 12, LM 5, SVC 1), retaining exactly one original winding per duplicate-index group. Selected source triangles 267360 become 267342 output triangles with zero observed coordinate deviation; 835 zero-area faces remain (RA 812, LM 6, SVC 17). This is not anatomical repair or approval. No non-uniform scaling, reconstruction, smoothing, decimation or invented anatomy. Do not apply HRA graph ontology local-placement rotations to GLB vertices.",
+  "selectionFile": "src/data/heart-hra.json",
+  "selectedMeshCount": 44,
+  "sourceBoundsMetres": {
+    "min": [
+      -0.04344825,
+      0.400054872,
+      -0.0385727622
+    ],
+    "max": [
+      0.0809029341,
+      0.585033238,
+      0.09018852
+    ]
+  },
+  "knownSourceConflicts": [
+    "LAD node has pulmonary-artery ontology annotation FMA:8636; active ontologyId withheld.",
+    "Anterior papillary muscle chamber assignment unresolved; active ontologyId withheld.",
+    "Male vascular metadata description says female, but id/title/GLB node prefixes and graph organ_owner_sex identify Male. Preserve this discrepancy.",
+    "No independently named LCx in male source; two diagonal labels retained without reinterpretation."
+  ]
+}

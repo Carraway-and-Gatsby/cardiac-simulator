@@ -1,0 +1,17 @@
+{
+  "checkedOn": "2026-10-15",
+  "mcpForBlender": "2.1.9",
+  "upstreamMainCommit": "7a0373ec9199183cb460068c4f96aed9c579fb4f",
+  "wheelSha256": "a5cbc6cf316fa7433566eb505a0c26ca22e28c10083bd1b09a23d9e357821ccc",
+  "installedAddonSha256": "eb0facf69781a30e69792532087d8d41c6a14fcd323353250abe7988ee297fa5",
+  "blender": "4.5.12 LTS",
+  "node": "22.23.1",
+  "uv": "0.13.1",
+  "codex": "0.153.4",
+  "claudeCode": "2.1.220",
+  "pythonMcp": "3.11 (uv-managed)",
+  "pythonTransitiveDependenciesFullyLocked": false,
+  "blenderAddonDisplayVersion": "1.8",
+  "blenderAddonProtocol": 13,
+  "guiAddonEnabledAndSceneQueryVerified": true
+}

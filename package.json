@@ -1,0 +1,56 @@
+{
+  "name": "cardio-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "anatomy:acquire": "python3 scripts/acquire-anatomy.py",
+    "verify:release": "node scripts/verify-assets.mjs --release",
+    "verify:config": "python3 scripts/check-config.py",
+    "test": "python3 -m unittest discover -s tests -v && npm run test:physiology && npm run test:flow && npm run test:motion && npm run test:i18n",
+    "test:motion": "node --experimental-strip-types --test tests/cardiac-motion.test.ts tests/valve-motion.test.ts tests/motion-geometry.test.ts",
+    "test:flow": "node --experimental-strip-types --test tests/blood-flow.test.ts",
+    "test:physiology": "node --experimental-strip-types --test tests/simulation.test.ts",
+    "validate:physiology": "node --experimental-strip-types scripts/validate-physiology.ts",
+    "check": "npm run verify:assets && npm run verify:config && npm test && npm run build",
+    "blender:build": "python3 scripts/run-blender.py",
+    "blender:check": "python3 scripts/run-blender.py --check",
+    "mcp:probe": "python3 scripts/probe-blender.py",
+    "mcp:check": "python3 scripts/check-mcp.py",
+    "licenses": "node scripts/dependency-licenses.mjs",
+    "test:i18n": "node --experimental-strip-types --test tests/i18n.test.ts tests/i18n-anatomy.test.ts tests/i18n-diagnostics.test.ts",
+    "verify:source": "node scripts/verify-source.mjs",
+    "check:source": "npm run verify:source && npm test && npm run build",
+    "setup:assets": "npm run anatomy:acquire && npm run blender:build && npm run verify:assets",
+    "setup:local": "python3 scripts/setup-local.py"
+  },
+  "dependencies": {
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  },
+  "license": "MIT",
+  "description": "Bilingual educational cardiovascular physiology lab with synchronized 3D heart, valve and flow visualization.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Carraway-and-Gatsby/cardio-simulator.git"
+  },
+  "homepage": "https://github.com/Carraway-and-Gatsby/cardio-simulator#readme"
+}

@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "heart-schematic-v1",
+      "file": "public/models/heart-schematic.glb",
+      "source": "blender/scripts/build_demo.py + src/data/heart-demo.json",
+      "creator": "cardio-simulator project; procedural development geometry",
+      "license": "LicenseRef-Project-Internal",
+      "licenseEvidence": "assets/licenses/heart-schematic.md",
+      "licenseReview": "internal-only",
+      "anatomyReview": "unreviewed",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewEvidence": null,
+      "limitations": "Spheres only; no anatomical shape, scale, valves, vessels, septa or physiology",
+      "sha256": "829a7cb5bdb728e936b0872b5d89ca33a1dcfcd57210bcf769d6adac09761213",
+      "generatorVersion": "4.5.12 LTS",
+      "reviewedSha256": null
+    },
+    {
+      "id": "heart-procedural-v1",
+      "file": "public/models/heart-procedural.glb",
+      "source": "blender/scripts/build_procedural.py + src/data/heart-procedural.json",
+      "creator": "cardio-simulator project; original parameterized geometry with Codex assistance",
+      "license": "LicenseRef-Project-Internal",
+      "licenseEvidence": "assets/licenses/heart-procedural.md",
+      "licenseReview": "internal-only",
+      "anatomyReview": "unreviewed",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewEvidence": null,
+      "reviewedSha256": null,
+      "sha256": "63ae800d1bdd2452e82db893e7979248b44badabbcac418a05da34382caa2002",
+      "limitations": "Unreviewed visual prototype; arbitrary dimensions, colors and positions; overlapping vessel junctions, no continuous lumen, valves, septa, coronary vessels, validated wall layers or physiology",
+      "structureSpec": "src/data/heart-procedural.json",
+      "sourceType": "procedural",
+      "externalAssets": [],
+      "referenceUrls": [
+        "https://www.nhlbi.nih.gov/health/heart/anatomy",
+        "https://www.nhlbi.nih.gov/health/heart/blood-flow"
+      ],
+      "changeHistory": [
+        {
+          "version": 1,
+          "date": "2026-10-15",
+          "description": "Original outer surface, four hollow chamber forms, and thirteen major vessel meshes; no downloaded geometry or textures."
+        }
+      ],
+      "generatorVersion": "4.5.12 LTS"
+    },
+    {
+      "id": "heart-hra-male-v1",
+      "file": "public/models/heart-hra.glb",
+      "source": "Human Reference Atlas v1.3 heart-male and blood-vasculature-male; whole source-node subset",
+      "creator": "Kristen Browne; Heidi Schlehlein (HRA); CardioLab selection and metadata packaging",
+      "license": "CC-BY-4.0",
+      "licenseEvidence": "assets/licenses/heart-hra.md",
+      "licenseReview": "internal-only",
+      "anatomyReview": "unreviewed",
+      "reviewer": null,
+      "reviewDate": null,
+      "reviewEvidence": null,
+      "reviewedSha256": null,
+      "sha256": "d0d261297693ed432727d0ea6cc2313eaa43500abe79a7d3ab63ed96dd5f29ce",
+      "structureSpec": "src/data/heart-hra.json",
+      "sourceConfig": "assets/sources/heart-hra.json",
+      "geometryReport": "blender/generated/heart-hra.report.json",
+      "sourceType": "atlas-reconstruction",
+      "externalAssets": [
+        {
+          "key": "heart",
+          "path": ".local/anatomy-sources/hra/heart-male-v1.3.glb",
+          "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/assets/3d-vh-m-heart.glb",
+          "sha256": "689df039c8bc264ea06a44cd926762976f0666c0ff2dc532d046409b185e6b0c",
+          "bytes": 4071772,
+          "version": "v1.3",
+          "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/metadata.json",
+          "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/assets/crosswalk.csv",
+          "license": "CC-BY-4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "creators": [
+            "Kristen Browne"
+          ],
+          "citation": "Browne, Kristen, and Heidi Schlehlein. 2024. \"3D Reference Organ for Heart, Male v1.3.\" https://doi.org/10.48539/HBM564.WKNG.249. Accessed on June 15, 2024.",
+          "sourceReviewers": [
+            "Shin Lin"
+          ],
+          "projectReviewers": [],
+          "selectionReason": "Selected whole, discrete source nodes in cardiac and proximal great-vessel scope. Distal body vessels excluded; no cropping.",
+          "excludeNodes": []
+        },
+        {
+          "key": "vasculature",
+          "path": ".local/anatomy-sources/hra/blood-vasculature-male-v1.3.glb",
+          "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/assets/3d-vh-m-blood-vasculature.glb",
+          "sha256": "3a9fe60549769f3a27c15a0901a055e7c4fd3a9f4a37f39a77f5047f0166d4c3",
+          "bytes": 18050040,
+          "version": "v1.3",
+          "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/metadata.json",
+          "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/assets/crosswalk.csv",
+          "license": "CC-BY-4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "creators": [
+            "Kristen Browne",
+            "Heidi Schlehlein"
+          ],
+          "citation": "Browne, Kristen,\tand Heidi Schlehlein.\t 2024.\t\"3D Reference Organ for Blood Vasculature, Male v1.3.\"\t https://doi.org/10.48539/HBM473.XTPP.725.\tAccessed June 15, 2024.",
+          "sourceReviewers": [
+            "Marc Halushka",
+            "Shin Lin"
+          ],
+          "projectReviewers": [],
+          "selectionReason": "Selected whole, discrete source nodes in cardiac and proximal great-vessel scope. Distal body vessels excluded; no cropping.",
+          "excludeNodes": []
+        }
+      ],
+      "referenceUrls": [
+        "https://cdn.humanatlas.io/digital-objects/ref-organ/heart-male/v1.3/metadata.json",
+        "https://cdn.humanatlas.io/digital-objects/ref-organ/blood-vasculature-male/v1.3/metadata.json"
+      ],
+      "limitations": "Static Visible Human-based atlas reconstruction, not direct segmentation or established structurally normal heart. No verified epicardial fat, chordal attachment, wall thickness, coronary dominance or motion. Source label conflicts and degenerate faces preserved. Project anatomical and distribution review pending.",
+      "changeHistory": [
+        {
+          "version": 1,
+          "date": "2026-10-23",
+        "description": "Selected 44 complete source nodes from aligned male HRA v1.3 heart and vasculature. Added stable identifiers, source hashes and unreviewed status; retained source positions and glTF metre scale. Blender automatic validation removes 18 duplicate-index faces (RA 12, LM 5, SVC 1), preserving every nonduplicate oriented triangle and one original winding per duplicate-index group. Source 267360 triangles become 267342 output triangles with zero observed coordinate deviation; 835 zero-area faces remain (RA 812, LM 6, SVC 17). This documented importer exception is not anatomical repair. No anatomical reconstruction, smoothing, decimation or invented detail."
+        }
+      ],
+      "generatorVersion": "4.5.12 LTS"
+    }
+  ]
+}

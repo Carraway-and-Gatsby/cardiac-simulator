@@ -1,0 +1,26 @@
+{
+  "id": "heart-procedural-v1",
+  "status": "unreviewed-procedural",
+  "coordinateSystem": "right-handed-y-up",
+  "units": "arbitrary",
+  "structures": [
+    {"id":"HEART","label":"심장 외형","english":"Outer surface","group":"surface","color":"#b86b70","note":"심장 윤곽을 직접 만든 외피입니다. 실제 심장벽의 층과 두께를 재현하지 않습니다."},
+    {"id":"RA","label":"우심방","english":"Right atrium","group":"chambers","color":"#67b4d5","note":"내부 공간을 볼 수 있는 단순화된 방입니다. 판막과 중격은 구현하지 않았습니다."},
+    {"id":"LA","label":"좌심방","english":"Left atrium","group":"chambers","color":"#efa0a7","note":"뒤쪽에 배치한 단순화된 방입니다. 회전하여 폐정맥과 함께 살펴볼 수 있습니다."},
+    {"id":"RV","label":"우심실","english":"Right ventricle","group":"chambers","color":"#558fc5","note":"앞쪽으로 펼쳐진 방의 시각화 초안입니다. 실제 심실벽이나 유출로를 검증하지 않았습니다."},
+    {"id":"LV","label":"좌심실","english":"Left ventricle","group":"chambers","color":"#d16a82","note":"아래쪽으로 길게 이어지는 방의 시각화 초안입니다. 두께와 비율은 임의 값입니다."},
+    {"id":"AORTA","label":"대동맥","english":"Aorta","group":"vessels","color":"#ce6c73","note":"상행부·활·하행부를 하나의 곡면으로 만든 시각화 초안입니다."},
+    {"id":"PT","label":"폐동맥줄기","english":"Pulmonary trunk","group":"vessels","color":"#78a4c9","note":"좌우 폐동맥으로 나뉘는 경로를 표시합니다. 접합부는 연속된 혈류 공간이 아닙니다."},
+    {"id":"RPA","label":"오른폐동맥","english":"Right pulmonary artery","group":"vessels","color":"#78a4c9","note":"우측으로 이어지는 경로를 단순화했습니다. 지름과 공간 관계는 검수 전입니다."},
+    {"id":"LPA","label":"왼폐동맥","english":"Left pulmonary artery","group":"vessels","color":"#78a4c9","note":"좌측으로 이어지는 경로를 단순화했습니다. 지름과 공간 관계는 검수 전입니다."},
+    {"id":"SVC","label":"위대정맥","english":"Superior vena cava","group":"vessels","color":"#7fb5cf","note":"우심방 위쪽으로 이어지는 경로의 시각화입니다."},
+    {"id":"IVC","label":"아래대정맥","english":"Inferior vena cava","group":"vessels","color":"#7fb5cf","note":"우심방 아래쪽으로 이어지는 경로의 시각화입니다."},
+    {"id":"RSPV","label":"오른위폐정맥","english":"Right superior pulmonary vein","group":"vessels","color":"#d9929d","note":"좌심방 뒤쪽으로 들어오는 경로를 단순화했습니다."},
+    {"id":"RIPV","label":"오른아래폐정맥","english":"Right inferior pulmonary vein","group":"vessels","color":"#d9929d","note":"좌심방 뒤쪽으로 들어오는 경로를 단순화했습니다."},
+    {"id":"LSPV","label":"왼위폐정맥","english":"Left superior pulmonary vein","group":"vessels","color":"#d9929d","note":"좌심방 뒤쪽으로 들어오는 경로를 단순화했습니다."},
+    {"id":"LIPV","label":"왼아래폐정맥","english":"Left inferior pulmonary vein","group":"vessels","color":"#d9929d","note":"좌심방 뒤쪽으로 들어오는 경로를 단순화했습니다."},
+    {"id":"BCT","label":"팔머리동맥","english":"Brachiocephalic trunk","group":"vessels","color":"#ce6c73","note":"대동맥활의 가지를 표시한 초안입니다. 더 작은 분지는 생략했습니다."},
+    {"id":"LCC","label":"왼온목동맥","english":"Left common carotid artery","group":"vessels","color":"#ce6c73","note":"대동맥활의 가지를 표시한 초안입니다. 더 작은 분지는 생략했습니다."},
+    {"id":"LSA","label":"왼빗장밑동맥","english":"Left subclavian artery","group":"vessels","color":"#ce6c73","note":"대동맥활의 가지를 표시한 초안입니다. 더 작은 분지는 생략했습니다."}
+  ]
+}

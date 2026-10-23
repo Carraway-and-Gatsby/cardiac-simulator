@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "sourceAssetSha256": "d0d261297693ed432727d0ea6cc2313eaa43500abe79a7d3ab63ed96dd5f29ce",
+  "checks": {
+    "npm run check": 0,
+    "npm run verify:release": 1
+  },
+  "screenshots": [
+    {
+      "path": ".local/flow-evidence/anatomy-opacity25.png",
+      "sha256": "557aedb22d4df3ae62842716d0ec4c2ff6fa5b4457331c239576864ed3b07907"
+    },
+    {
+      "path": ".local/flow-evidence/baseline-ejection.png",
+      "sha256": "c7a32c80585909292548052c9f0c014c09f5fb05092b8981fe11d6102351e66c"
+    },
+    {
+      "path": ".local/flow-evidence/clipped-flow-flipped.png",
+      "sha256": "9c72dea35c9c75d1fad0cdc22e3850ee1240bd3a4f238e6be8f125b2b53501f8"
+    },
+    {
+      "path": ".local/flow-evidence/clipped-flow.png",
+      "sha256": "5eb36bb12be5ed0a87dac7d336e223da08c3fd60e2cec95d9d83c0f8a3c68f43"
+    },
+    {
+      "path": ".local/flow-evidence/ejection-84ms.png",
+      "sha256": "dfb4784ae3482f6cd216d3fd1aebc3077695fc60c193a63f5f535984ac23e6ff"
+    },
+    {
+      "path": ".local/flow-evidence/ejection-paused.png",
+      "sha256": "dfb4784ae3482f6cd216d3fd1aebc3077695fc60c193a63f5f535984ac23e6ff"
+    },
+    {
+      "path": ".local/flow-evidence/filling-344ms.png",
+      "sha256": "4ed6a34d635addf8cc9675846fd1992fc4d3b1cbc7ece582452134ba226c4784"
+    },
+    {
+      "path": ".local/flow-evidence/final.png",
+      "sha256": "65409a1f18531813a9d141a690d6318eae13882d59f8201fbf03783d2159d6cc"
+    },
+    {
+      "path": ".local/flow-evidence/first.png",
+      "sha256": "ef0cb3a53faf579ce6b33039b8fb128eb7147dbbb14c277e22f7006d483f4d84"
+    },
+    {
+      "path": ".local/flow-evidence/flow-off.png",
+      "sha256": "9bb6d9ec580bce51f47413f9c0652833c4d8009a923463ab08372eaa9ce0ce1a"
+    },
+    {
+      "path": ".local/flow-evidence/high-density-no-guides.png",
+      "sha256": "f6ade8657999aa3310dece593d7765acf69c88405249fc333434d8bec474314a"
+    },
+    {
+      "path": ".local/flow-evidence/left-circulation.png",
+      "sha256": "9019fd439a218afce221e3723f8fd18df9607b779841b97bc05e48397c31dc45"
+    },
+    {
+      "path": ".local/flow-evidence/mitral-regurgitation-72ms.png",
+      "sha256": "d4aa1d75ccc9a4c94cc6d28b4d3a67e5016aa67a5bfd588676984e3481b28e39"
+    },
+    {
+      "path": ".local/flow-evidence/mobile.png",
+      "sha256": "3166fba5212eb5088f0739706d5e715aba8c90974fa32079bd8f505ef8cc3c35"
+    },
+    {
+      "path": ".local/flow-evidence/multiple-cycles-paused.png",
+      "sha256": "bf76de7b58dc27e412ad518afb52ea8ecd340a4c3d497a39cb55465b2d17c0fa"
+    },
+    {
+      "path": ".local/flow-evidence/opaque-anatomy.png",
+      "sha256": "f4b314fc987fcfa9b0a587e1f83a65d4aaf73f685980ce2b5b6f0e5cffc430f9"
+    },
+    {
+      "path": ".local/flow-evidence/right-circulation.png",
+      "sha256": "2bfe78ea3ca8355abd02db13a613393095633b773e7d2b5c05badd874db16880"
+    },
+    {
+      "path": ".local/flow-evidence/rotated-flow.png",
+      "sha256": "991b9260dc7c17a0f016abb14f57d5253399a6a9cc9547ee92fda181338037fc"
+    },
+    {
+      "path": ".local/flow-evidence/same-index-inspect-repeat.png",
+      "sha256": "5ce98aa0508af319fd1beaf583d8a5ebd300dc071979560a3250d9c35fb6dba0"
+    },
+    {
+      "path": ".local/flow-evidence/same-index-inspect.png",
+      "sha256": "5ce98aa0508af319fd1beaf583d8a5ebd300dc071979560a3250d9c35fb6dba0"
+    },
+    {
+      "path": ".local/flow-evidence/scrub-return.png",
+      "sha256": "dfb4784ae3482f6cd216d3fd1aebc3077695fc60c193a63f5f535984ac23e6ff"
+    },
+    {
+      "path": ".local/flow-evidence/zoomed-flow.png",
+      "sha256": "d3779ddb854ae67ab1f8336a4ced6d57ff2182a8800a0eeda49c8307658bd5c1"
+    }
+  ],
+  "notes": [
+    "Screenshots were captured from the real in-app browser during iterative UI checks; final.png is the final desktop view.",
+    "Byte-identical pause and return-to-sample captures verified. Same-index graph inspection after multiple cycles updates immediately and is repeatable.",
+    "Reduced-motion startup is implemented but OS preference emulation was not performed. No expert anatomy or measured flow validation."
+  ]
+}

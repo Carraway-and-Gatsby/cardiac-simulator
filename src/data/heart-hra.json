@@ -1,0 +1,1283 @@
+{
+  "id": "heart-hra-male-v1",
+  "status": "unreviewed-source-atlas",
+  "coordinateSystem": "right-handed-y-up",
+  "units": "metres",
+  "source": {
+    "provider": "Human Reference Atlas / HuBMAP",
+    "version": "v1.3",
+    "evidence": "atlas-reconstruction",
+    "subject": "Visible Human Male",
+    "subjectAgeYears": 38,
+    "subjectPathology": "not confirmed for the selected reconstructed heart",
+    "cardiacPhase": "not provided",
+    "motion": "static; no measured motion or deformation field",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "url": "https://humanatlas.io/3d-reference-library",
+    "authors": [
+      "Kristen Browne",
+      "Heidi Schlehlein"
+    ],
+    "note": "GLB reference atlas derived from the Visible Human resource and medical illustration. Not a direct DICOM segmentation or a verified normal adult population model."
+  },
+  "orientation": {
+    "xPositive": "patient-left",
+    "yPositive": "superior",
+    "zPositive": "anterior",
+    "evidence": "inferred-and-cross-checked-from-source-label-landmarks",
+    "expertValidated": false,
+    "notes": "Identity glTF node transforms retained. L/R pulmonary veins and chambers establish X laterality; superior/inferior structures establish Y; RV is anterior to LA in +Z. Explicit HRA anatomical-axis statement was not located. HRA graph dimensions independently confirm source metre scale."
+  },
+  "sourceBoundsMetres": {
+    "min": [
+      -0.04344825,
+      0.400054872,
+      -0.0385727622
+    ],
+    "max": [
+      0.0809029341,
+      0.585033238,
+      0.09018852
+    ]
+  },
+  "heartBoundsMillimetres": [
+    124.3511841,
+    105.435234,
+    105.2152393
+  ],
+  "structures": [
+    {
+      "id": "RA",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_right_cardiac_atrium",
+      "label": "우심방",
+      "english": "right cardiac atrium",
+      "group": "chambers",
+      "color": "#7f919c",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002078",
+      "evidence": "atlas-reconstruction",
+      "note": "Visible Human 기반 정적 아틀라스 재구성. 직접 분할·벽 두께·정상성 및 심장 주기 위상은 이 프로젝트에서 검증하지 않았습니다. 조직 외면/내면을 포함하는 원본 형상이며 별도 혈액 공간 메시는 없습니다.",
+      "sourceLabel": "right cardiac atrium",
+      "sourceOntologyId": "UBERON:0002078",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.04344825,
+          0.433007568,
+          0.00297307852
+        ],
+        "max": [
+          0.008695033,
+          0.5288064,
+          0.0657831654
+        ]
+      }
+    },
+    {
+      "id": "LA",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_left_cardiac_atrium",
+      "label": "좌심방",
+      "english": "left cardiac atrium",
+      "group": "chambers",
+      "color": "#a87876",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002079",
+      "evidence": "atlas-reconstruction",
+      "note": "Visible Human 기반 정적 아틀라스 재구성. 직접 분할·벽 두께·정상성 및 심장 주기 위상은 이 프로젝트에서 검증하지 않았습니다. 조직 외면/내면을 포함하는 원본 형상이며 별도 혈액 공간 메시는 없습니다.",
+      "sourceLabel": "left cardiac atrium",
+      "sourceOntologyId": "UBERON:0002079",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.03211241,
+          0.4565565,
+          -0.0150267193
+        ],
+        "max": [
+          0.0408494659,
+          0.5287121,
+          0.0319449268
+        ]
+      }
+    },
+    {
+      "id": "RV",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_heart_right_ventricle",
+      "label": "우심실",
+      "english": "heart right ventricle",
+      "group": "chambers",
+      "color": "#748897",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002080",
+      "evidence": "atlas-reconstruction",
+      "note": "Visible Human 기반 정적 아틀라스 재구성. 직접 분할·벽 두께·정상성 및 심장 주기 위상은 이 프로젝트에서 검증하지 않았습니다. 조직 외면/내면을 포함하는 원본 형상이며 별도 혈액 공간 메시는 없습니다.",
+      "sourceLabel": "heart right ventricle",
+      "sourceOntologyId": "UBERON:0002080",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0238987412,
+          0.423371166,
+          0.0248448085
+        ],
+        "max": [
+          0.059220206,
+          0.5210455,
+          0.09018852
+        ]
+      }
+    },
+    {
+      "id": "LV",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_heart_left_ventricle",
+      "label": "좌심실",
+      "english": "heart left ventricle",
+      "group": "chambers",
+      "color": "#a76864",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002084",
+      "evidence": "atlas-reconstruction",
+      "note": "Visible Human 기반 정적 아틀라스 재구성. 직접 분할·벽 두께·정상성 및 심장 주기 위상은 이 프로젝트에서 검증하지 않았습니다. 조직 외면/내면을 포함하는 원본 형상이며 별도 혈액 공간 메시는 없습니다.",
+      "sourceLabel": "heart left ventricle",
+      "sourceOntologyId": "UBERON:0002084",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00453871535,
+          0.4258946,
+          -0.004836521
+        ],
+        "max": [
+          0.0809029341,
+          0.5027066,
+          0.08776849
+        ]
+      }
+    },
+    {
+      "id": "IVS",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_interventricular_septum",
+      "label": "심실중격",
+      "english": "interventricular septum",
+      "group": "myocardium",
+      "color": "#aa7971",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002094",
+      "evidence": "atlas-reconstruction",
+      "note": "Visible Human 기반 정적 아틀라스 재구성. 직접 분할·벽 두께·정상성 및 심장 주기 위상은 이 프로젝트에서 검증하지 않았습니다.",
+      "sourceLabel": "interventricular septum",
+      "sourceOntologyId": "UBERON:0002094",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.006640857,
+          0.4270136,
+          0.0167534444
+        ],
+        "max": [
+          0.0585137829,
+          0.499496251,
+          0.08351639
+        ]
+      }
+    },
+    {
+      "id": "MV",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_mitral_valve",
+      "label": "승모판",
+      "english": "mitral valve",
+      "group": "valves",
+      "color": "#d1b5a1",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002135",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 정적 판막 메시입니다. 개별 첨판·건삭·접합부는 별도 분류되지 않았으며 해부 검수와 동역학은 미완료입니다.",
+      "sourceLabel": "mitral valve",
+      "sourceOntologyId": "UBERON:0002135",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00437428663,
+          0.456529,
+          -0.00353920925
+        ],
+        "max": [
+          0.040971268,
+          0.497614324,
+          0.0269172415
+        ]
+      }
+    },
+    {
+      "id": "TV",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_tricuspid_valve",
+      "label": "삼첨판",
+      "english": "tricuspid valve",
+      "group": "valves",
+      "color": "#d1b5a1",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002134",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 정적 판막 메시입니다. 개별 첨판·건삭·접합부는 별도 분류되지 않았으며 해부 검수와 동역학은 미완료입니다.",
+      "sourceLabel": "tricuspid valve",
+      "sourceOntologyId": "UBERON:0002134",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0243575852,
+          0.4368461,
+          0.0268870462
+        ],
+        "max": [
+          0.0133703193,
+          0.483038574,
+          0.06448795
+        ]
+      }
+    },
+    {
+      "id": "AV",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_aortic_valve",
+      "label": "대동맥판",
+      "english": "aortic valve",
+      "group": "valves",
+      "color": "#d1b5a1",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002137",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 정적 판막 메시입니다. 개별 첨판·건삭·접합부는 별도 분류되지 않았으며 해부 검수와 동역학은 미완료입니다.",
+      "sourceLabel": "aortic valve",
+      "sourceOntologyId": "UBERON:0002137",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.005520916,
+          0.486516178,
+          0.0179098155
+        ],
+        "max": [
+          0.0191530641,
+          0.511926651,
+          0.03936688
+        ]
+      }
+    },
+    {
+      "id": "PVvalve",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_pulmonary_valve",
+      "label": "폐동맥판",
+      "english": "pulmonary valve",
+      "group": "valves",
+      "color": "#d1b5a1",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002146",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 정적 판막 메시입니다. 개별 첨판·건삭·접합부는 별도 분류되지 않았으며 해부 검수와 동역학은 미완료입니다.",
+      "sourceLabel": "pulmonary valve",
+      "sourceOntologyId": "UBERON:0002146",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00436516153,
+          0.496385247,
+          0.03076936
+        ],
+        "max": [
+          0.0300822947,
+          0.52060616,
+          0.0537916347
+        ]
+      }
+    },
+    {
+      "id": "PM_ANT",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_papillary_muscle_of_heart_anterior",
+      "label": "전방 유두근 · 원본 분류 확인 필요",
+      "english": "Anterior papillary muscle (source assignment unresolved)",
+      "group": "muscles",
+      "color": "#b68b7d",
+      "parent": "heart",
+      "ontologyId": null,
+      "evidence": "atlas-reconstruction",
+      "note": "원본 crosswalk는 좌심실 전방 유두근(FMA:7264)으로 표시하지만 표면 위치가 우심실 쪽이어서 소속 충돌이 의심됩니다. 임의로 우심실에 재배정하지 않고 ontologyId와 심실 소속을 미확정으로 둡니다.",
+      "sourceLabel": "Anterior papillary muscle of left ventricle",
+      "sourceOntologyId": "FMA:7264",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00733006652,
+          0.4457935,
+          0.0689485744
+        ],
+        "max": [
+          0.0305818059,
+          0.4602303,
+          0.0853312
+        ]
+      }
+    },
+    {
+      "id": "PM_AL",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_papillary_muscle_of_heart_anterolateral",
+      "label": "전외측 유두근",
+      "english": "Anterolateral head of lateral papillary muscle of left ventricle",
+      "group": "muscles",
+      "color": "#b68b7d",
+      "parent": "heart",
+      "ontologyId": "FMA:7265",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 표면과 분류를 보존합니다. 부착 관계·세부 명칭은 별도 전문가 검수 대상입니다.",
+      "sourceLabel": "Anterolateral head of lateral papillary muscle of left ventricle",
+      "sourceOntologyId": "FMA:7265",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.03084978,
+          0.4550368,
+          0.02344627
+        ],
+        "max": [
+          0.0600966066,
+          0.4836225,
+          0.0604038052
+        ]
+      }
+    },
+    {
+      "id": "PM_SEPT",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_papillary_muscle_of_heart_medial",
+      "label": "중격 유두근",
+      "english": "Septal papillary muscle of right ventricle",
+      "group": "muscles",
+      "color": "#b68b7d",
+      "parent": "heart",
+      "ontologyId": "FMA:7262",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 표면과 분류를 보존합니다. 부착 관계·세부 명칭은 별도 전문가 검수 대상입니다.",
+      "sourceLabel": "Septal papillary muscle of right ventricle",
+      "sourceOntologyId": "FMA:7262",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0212490726,
+          0.440913379,
+          0.0503119752
+        ],
+        "max": [
+          0.02756081,
+          0.447040677,
+          0.0588073544
+        ]
+      }
+    },
+    {
+      "id": "PM_POST",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_papillary_muscle_of_heart_posterior",
+      "label": "후방 유두근",
+      "english": "Posterior papillary muscle of right ventricle",
+      "group": "muscles",
+      "color": "#b68b7d",
+      "parent": "heart",
+      "ontologyId": "FMA:7261",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 표면과 분류를 보존합니다. 부착 관계·세부 명칭은 별도 전문가 검수 대상입니다.",
+      "sourceLabel": "Posterior papillary muscle of right ventricle",
+      "sourceOntologyId": "FMA:7261",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.008377033,
+          0.431416184,
+          0.0553210527
+        ],
+        "max": [
+          0.01677544,
+          0.436867118,
+          0.0621636
+        ]
+      }
+    },
+    {
+      "id": "PM_PM",
+      "sourceKey": "heart",
+      "sourceNode": "VH_M_papillary_muscle_of_heart_posteromedial",
+      "label": "후내측 유두근",
+      "english": "Posteromedial head of posterior papillary muscle of left ventricle",
+      "group": "muscles",
+      "color": "#b68b7d",
+      "parent": "heart",
+      "ontologyId": "FMA:7267",
+      "evidence": "atlas-reconstruction",
+      "note": "원본 표면과 분류를 보존합니다. 부착 관계·세부 명칭은 별도 전문가 검수 대상입니다.",
+      "sourceLabel": "Posteromedial head of posterior papillary muscle of left ventricle",
+      "sourceOntologyId": "FMA:7267",
+      "geometryRole": "atlas-tissue-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0318378471,
+          0.451972723,
+          0.0250845
+        ],
+        "max": [
+          0.0590670966,
+          0.464549541,
+          0.0587493964
+        ]
+      }
+    },
+    {
+      "id": "AO",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_ascending_aorta",
+      "label": "상행대동맥",
+      "english": "ascending aorta",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001496",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "ascending aorta",
+      "sourceOntologyId": "UBERON:0001496",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0153763546,
+          0.500039339,
+          0.0174285546
+        ],
+        "max": [
+          0.0104615055,
+          0.5379629,
+          0.03968864
+        ]
+      }
+    },
+    {
+      "id": "ARCH",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_aortic_arch",
+      "label": "대동맥궁",
+      "english": "arch of aorta",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001508",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "arch of aorta",
+      "sourceOntologyId": "UBERON:0001508",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0147259021,
+          0.530643165,
+          -0.025458945
+        ],
+        "max": [
+          0.0237415358,
+          0.569563568,
+          0.0377176143
+        ]
+      }
+    },
+    {
+      "id": "BCA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_brachiocephalic_artery_a",
+      "label": "팔머리동맥 · 근위부",
+      "english": "brachiocephalic artery",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001529",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "brachiocephalic artery",
+      "sourceOntologyId": "UBERON:0001529",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0130131338,
+          0.560786545,
+          0.0169891324
+        ],
+        "max": [
+          0.0009065437,
+          0.5791175,
+          0.027443843
+        ]
+      }
+    },
+    {
+      "id": "LCCA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_left_common_carotid_artery_a",
+      "label": "좌총경동맥 · 근위부",
+      "english": "left common carotid artery plus branches",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001536",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "left common carotid artery plus branches",
+      "sourceOntologyId": "UBERON:0001536",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00490123359,
+          0.5682878,
+          0.0124517474
+        ],
+        "max": [
+          0.0135626094,
+          0.5844527,
+          0.0205446128
+        ]
+      }
+    },
+    {
+      "id": "LSA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_left_subclavian_artery_a",
+      "label": "좌쇄골하동맥 · 근위부",
+      "english": "left subclavian artery",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001584",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "left subclavian artery",
+      "sourceOntologyId": "UBERON:0001584",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0100102732,
+          0.566353142,
+          -0.0007921481
+        ],
+        "max": [
+          0.0194721855,
+          0.585033238,
+          0.009388225
+        ]
+      }
+    },
+    {
+      "id": "DAO",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_descending_aorta_a",
+      "label": "하행대동맥 · 흉부 범위",
+      "english": "descending aorta",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001514",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "descending aorta",
+      "sourceOntologyId": "UBERON:0001514",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.003831501,
+          0.401652,
+          -0.0385727622
+        ],
+        "max": [
+          0.0221219957,
+          0.5451422,
+          -0.0140131423
+        ]
+      }
+    },
+    {
+      "id": "PT",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_trunk",
+      "label": "폐동맥줄기",
+      "english": "pulmonary trunk",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0002333",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "pulmonary trunk",
+      "sourceOntologyId": "UBERON:0002333",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.00118367374,
+          0.5050689,
+          0.00188576931
+        ],
+        "max": [
+          0.0296767745,
+          0.543507755,
+          0.0486899838
+        ]
+      }
+    },
+    {
+      "id": "LPA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_artery_L",
+      "label": "좌폐동맥",
+      "english": "left pulmonary artery",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001652",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "left pulmonary artery",
+      "sourceOntologyId": "UBERON:0001652",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0137773631,
+          0.504949152,
+          -0.02771284
+        ],
+        "max": [
+          0.0572789162,
+          0.54332,
+          0.0182867553
+        ]
+      }
+    },
+    {
+      "id": "RPA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_artery_R",
+      "label": "우폐동맥",
+      "english": "right pulmonary artery",
+      "group": "vessels",
+      "color": "#ac7770",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001651",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "right pulmonary artery",
+      "sourceOntologyId": "UBERON:0001651",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.02534434,
+          0.5123853,
+          -0.00483009825
+        ],
+        "max": [
+          0.00695106853,
+          0.536962,
+          0.02176063
+        ]
+      }
+    },
+    {
+      "id": "RIPV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_vein_R_inf",
+      "label": "우하폐정맥",
+      "english": "right inferior pulmonary vein",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:49911",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "right inferior pulmonary vein",
+      "sourceOntologyId": "FMA:49911",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.03242735,
+          0.476125181,
+          -0.0192992054
+        ],
+        "max": [
+          -0.0121173821,
+          0.501349866,
+          -0.006392522
+        ]
+      }
+    },
+    {
+      "id": "RSPV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_vein_R_sup",
+      "label": "우상폐정맥",
+      "english": "right superior pulmonary vein",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:49914",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "right superior pulmonary vein",
+      "sourceOntologyId": "FMA:49914",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.038705945,
+          0.487023264,
+          -0.00134752272
+        ],
+        "max": [
+          -0.0236042589,
+          0.5078802,
+          0.0113832662
+        ]
+      }
+    },
+    {
+      "id": "LIPV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_vein_L_inf",
+      "label": "좌하폐정맥",
+      "english": "left inferior pulmonary vein",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:49913",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "left inferior pulmonary vein",
+      "sourceOntologyId": "FMA:49913",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.02000716,
+          0.482097954,
+          -0.0243719667
+        ],
+        "max": [
+          0.0427705273,
+          0.5062967,
+          -0.00625871634
+        ]
+      }
+    },
+    {
+      "id": "LSPV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_pulmonary_vein_L_sup",
+      "label": "좌상폐정맥",
+      "english": "left superior pulmonary vein",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:49916",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "left superior pulmonary vein",
+      "sourceOntologyId": "FMA:49916",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0323126726,
+          0.514596343,
+          0.00100956322
+        ],
+        "max": [
+          0.04718953,
+          0.533965766,
+          0.0149689447
+        ]
+      }
+    },
+    {
+      "id": "SVC",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_superior_vena_cava",
+      "label": "상대정맥",
+      "english": "superior vena cava",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:4720",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "superior vena cava",
+      "sourceOntologyId": "FMA:4720",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.03936854,
+          0.4992706,
+          0.00467296969
+        ],
+        "max": [
+          -0.01146867,
+          0.5660557,
+          0.0352427028
+        ]
+      }
+    },
+    {
+      "id": "IVC",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_inferior_vena_cava_a",
+      "label": "하대정맥 · 근위부",
+      "english": "inferior vena cava",
+      "group": "vessels",
+      "color": "#748a98",
+      "parent": "heart",
+      "ontologyId": "FMA:10951",
+      "evidence": "atlas-reconstruction",
+      "note": "동일 남성 아틀라스 좌표의 원본 메시입니다. 원본에서 나뉜 근위 메시만 선택했고 자르기·분기 추가·정합 변형은 하지 않았습니다. 내강 연속성·혈관 기시부는 검수 전입니다.",
+      "sourceLabel": "inferior vena cava",
+      "sourceOntologyId": "FMA:10951",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0369341671,
+          0.400054872,
+          -0.0204466246
+        ],
+        "max": [
+          -0.00368294818,
+          0.457256377,
+          0.027824875
+        ]
+      }
+    },
+    {
+      "id": "LM",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_left_coronary_artery",
+      "label": "좌관상동맥 · 주간부",
+      "english": "left coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001626",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "left coronary artery",
+      "sourceOntologyId": "UBERON:0001626",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0116981389,
+          0.5029151,
+          0.0214703176
+        ],
+        "max": [
+          0.0250203442,
+          0.510010064,
+          0.0265967362
+        ]
+      }
+    },
+    {
+      "id": "LAD",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_left_anterior_descending_artery",
+      "label": "좌전하행동맥 · 원본 주석 충돌",
+      "english": "Left anterior descending artery (source annotation conflict)",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": null,
+      "evidence": "atlas-reconstruction",
+      "note": "원본 node는 left_anterior_descending_artery지만 crosswalk의 FMA:8636과 label은 좌폐동맥 전하행가지로 충돌합니다. 원본 이름에 따른 잠정 표시이며 올바른 ontology 매핑·연결 검수 전입니다.",
+      "sourceLabel": "Anterior descending branch of left pulmonary artery",
+      "sourceOntologyId": "FMA:8636",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0246724132,
+          0.427351475,
+          0.0225630756
+        ],
+        "max": [
+          0.0604942776,
+          0.50551635,
+          0.0871790648
+        ]
+      }
+    },
+    {
+      "id": "RCA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_right_coronary_artery",
+      "label": "우관상동맥",
+      "english": "right coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "UBERON:0001625",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "right coronary artery",
+      "sourceOntologyId": "UBERON:0001625",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.02768452,
+          0.432805121,
+          -0.00120389217
+        ],
+        "max": [
+          0.0274122488,
+          0.5023182,
+          0.0678852946
+        ]
+      }
+    },
+    {
+      "id": "RM",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_right_marginal_artery",
+      "label": "우변연동맥",
+      "english": "marginal branch of right coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "FMA:3818",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "marginal branch of right coronary artery",
+      "sourceOntologyId": "FMA:3818",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.027792003,
+          0.434886664,
+          0.0669623539
+        ],
+        "max": [
+          -0.00331608159,
+          0.450181633,
+          0.07260709
+        ]
+      }
+    },
+    {
+      "id": "RPDA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_right_posterior_descending_artery",
+      "label": "우측 후하행 가지 · 원본 표기",
+      "english": "Posterior interventricular branch of right coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "FMA:3840",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Posterior interventricular branch of right coronary artery",
+      "sourceOntologyId": "FMA:3840",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.009521442,
+          0.424937546,
+          0.0291923471
+        ],
+        "max": [
+          0.0602776669,
+          0.4444311,
+          0.07792558
+        ]
+      }
+    },
+    {
+      "id": "DIAG1",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_diagonal_branch_of_anterior_descending_branch_of_left_coronary_artery",
+      "label": "대각가지 1 · 원본 표기",
+      "english": "Diagonal branch of anterior descending branch of left coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "FMA:3860",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Diagonal branch of anterior descending branch of left coronary artery",
+      "sourceOntologyId": "FMA:3860",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.04087062,
+          0.489706844,
+          0.03291708
+        ],
+        "max": [
+          0.0562095828,
+          0.5003232,
+          0.0544953234
+        ]
+      }
+    },
+    {
+      "id": "DIAG2",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_diagonal_branch_of_left_anterior_descending_artery",
+      "label": "대각가지 2 · 원본 표기",
+      "english": "Diagonal branch of anterior descending branch of left coronary artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "FMA:3860",
+      "evidence": "atlas-reconstruction",
+      "note": "원본에는 다른 대각가지 메시와 별개로 이 이름이 존재합니다. LCx에 해당한다고 추정하여 이름을 바꾸지 않았습니다. 혈관 경로·주석 대응 검수 전입니다.",
+      "sourceLabel": "Diagonal branch of anterior descending branch of left coronary artery",
+      "sourceOntologyId": "FMA:3860",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0213497486,
+          0.4661776,
+          -0.00502545573
+        ],
+        "max": [
+          0.0427375361,
+          0.50420624,
+          0.0233831275
+        ]
+      }
+    },
+    {
+      "id": "LMARG",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_left_marginal_branch",
+      "label": "좌변연가지",
+      "english": "Left marginal artery",
+      "group": "coronary",
+      "color": "#bd8774",
+      "parent": "heart",
+      "ontologyId": "FMA:3902",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Left marginal artery",
+      "sourceOntologyId": "FMA:3902",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.0415999629,
+          0.4811395,
+          0.006457851
+        ],
+        "max": [
+          0.06449767,
+          0.488003045,
+          0.0235658679
+        ]
+      }
+    },
+    {
+      "id": "GCV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_great_cardiac_vein",
+      "label": "큰심장정맥",
+      "english": "great vein of heart",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "UBERON:0006958",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "great vein of heart",
+      "sourceOntologyId": "UBERON:0006958",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.03802083,
+          0.4271603,
+          0.0176014975
+        ],
+        "max": [
+          0.05992934,
+          0.501892269,
+          0.0870483
+        ]
+      }
+    },
+    {
+      "id": "MCV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_middle_cardiac_vein",
+      "label": "중간심장정맥",
+      "english": "middle cardiac vein",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "UBERON:0009687",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "middle cardiac vein",
+      "sourceOntologyId": "UBERON:0009687",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.007020191,
+          0.423693925,
+          0.02101942
+        ],
+        "max": [
+          0.06213924,
+          0.442338973,
+          0.07703658
+        ]
+      }
+    },
+    {
+      "id": "OVLA",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_oblique_vein_of_left_atrium",
+      "label": "좌심방빗정맥",
+      "english": "Oblique vein of left atrium",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "FMA:4715",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Oblique vein of left atrium",
+      "sourceOntologyId": "FMA:4715",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.03312343,
+          0.502498448,
+          0.0169513356
+        ],
+        "max": [
+          0.0363969281,
+          0.515624464,
+          0.0247071646
+        ]
+      }
+    },
+    {
+      "id": "ACV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_anterior_cardiac_vein",
+      "label": "앞심장정맥",
+      "english": "Anterior cardiac vein",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "FMA:76767",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Anterior cardiac vein",
+      "sourceOntologyId": "FMA:76767",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0264982712,
+          0.437765181,
+          0.05701243
+        ],
+        "max": [
+          -4.490256e-05,
+          0.4836458,
+          0.078175284
+        ]
+      }
+    },
+    {
+      "id": "CS",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_coronary_sinus",
+      "label": "관상정맥동",
+      "english": "coronary sinus",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "UBERON:0005438",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "coronary sinus",
+      "sourceOntologyId": "UBERON:0005438",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.000266407122,
+          0.4388682,
+          -0.007406833
+        ],
+        "max": [
+          0.04546605,
+          0.5033238,
+          0.0251336023
+        ]
+      }
+    },
+    {
+      "id": "PVLV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_posterior_vein_of_left_ventricle",
+      "label": "좌심실뒤정맥",
+      "english": "Posterior vein of left ventricle",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "FMA:4712",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "Posterior vein of left ventricle",
+      "sourceOntologyId": "FMA:4712",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          0.04367589,
+          0.4506783,
+          -0.00123590464
+        ],
+        "max": [
+          0.07916997,
+          0.482701719,
+          0.04321667
+        ]
+      }
+    },
+    {
+      "id": "SCV",
+      "sourceKey": "vasculature",
+      "sourceNode": "VH_M_small_cardiac_vein",
+      "label": "작은심장정맥",
+      "english": "small cardiac vein",
+      "group": "coronary",
+      "color": "#8a929b",
+      "parent": "heart",
+      "ontologyId": "UBERON:0035374",
+      "evidence": "atlas-reconstruction",
+      "note": "같은 아틀라스의 원본 혈관 표면입니다. 기시부·연속성·관상동맥 우세형은 검수 전입니다. 이 메시 세트에는 LCx라는 별도 이름이 없습니다.",
+      "sourceLabel": "small cardiac vein",
+      "sourceOntologyId": "UBERON:0035374",
+      "geometryRole": "atlas-vessel-surface",
+      "sourceBoundsMetres": {
+        "min": [
+          -0.0237649959,
+          0.4332749,
+          0.0210729335
+        ],
+        "max": [
+          0.00419737631,
+          0.445344329,
+          0.06956193
+        ]
+      }
+    }
+  ]
+}
