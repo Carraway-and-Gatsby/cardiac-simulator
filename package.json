@@ -30,7 +30,9 @@
     "verify:source": "node scripts/verify-source.mjs",
     "check:source": "npm run verify:source && npm test && npm run build",
     "setup:assets": "npm run anatomy:acquire && npm run blender:build && npm run verify:assets",
-    "setup:local": "python3 scripts/setup-local.py"
+    "setup:local": "python3 scripts/setup-local.py",
+    "build:pages": "npm run build -- --base=/cardio-simulator/ && node scripts/stage-pages.mjs && node scripts/verify-pages.mjs",
+    "verify:pages": "node scripts/verify-pages.mjs"
   },
   "dependencies": {
     "@react-three/drei": "10.7.9",
@@ -52,5 +54,5 @@
     "type": "git",
     "url": "https://github.com/Carraway-and-Gatsby/cardio-simulator.git"
   },
-  "homepage": "https://github.com/Carraway-and-Gatsby/cardio-simulator#readme"
+  "homepage": "https://carraway-and-gatsby.github.io/cardio-simulator/"
 }

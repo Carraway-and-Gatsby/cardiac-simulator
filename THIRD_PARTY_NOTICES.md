@@ -11,7 +11,9 @@ metadata derived from the **Human Reference Atlas / HuBMAP 3D Reference Organ
 Library v1.3**. These HRA-derived portions retain **Creative Commons Attribution
 4.0 International (CC BY 4.0)**. The local asset setup downloads the associated
 source GLBs separately; downloaded and generated anatomical binaries are not
-included in this source repository.
+included in Git history. The public browser demo distributes a generated HRA
+subset as a GitHub Pages artifact under CC BY 4.0, with this attribution, license
+links and modification record. MIT does not relicense that model.
 
 - **Heart, Male v1.3.** Creator: Kristen Browne. Citation: Browne, Kristen, and
   Heidi Schlehlein. 2024. “3D Reference Organ for Heart, Male v1.3.”
@@ -46,8 +48,9 @@ Detailed changes, hashes and known defects are recorded in
 
 Keep the source attribution, license link and indication of changes with any
 reuse of HRA-derived material. CardioLab's unresolved anatomical review and
-asset-distribution gate describe the project's quality and release policy; they
-do not add restrictions to the rights granted by CC BY 4.0 or MIT.
+expert-reviewed release gate describe the project's quality policy; they do not
+add restrictions to the rights granted by CC BY 4.0 or MIT. The public demo is an
+unreviewed demonstration, not expert approval of the anatomy or animation.
 
 ## JavaScript and development dependencies
 

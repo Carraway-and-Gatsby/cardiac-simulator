@@ -1,4 +1,4 @@
-# Public source release and local assets
+# Public demo, source release and local assets
 
 ## What is being published
 
@@ -9,11 +9,26 @@ code and documentation are licensed under [MIT](../LICENSE). HRA-derived
 metadata retains CC BY 4.0 attribution as described in
 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
-This is a **source-code publication**. Downloaded/generated anatomical binaries
-remain omitted because their project expert and distribution review is
-incomplete. This does not relicense HRA material or place new restrictions on
-CC BY 4.0. It preserves the project's existing asset-review policy. The manifest
-continues to record `internal-only`, `unreviewed` and no project reviewer.
+The installation-free browser demonstration uses this GitHub Pages address:
+**[CardioLab on GitHub Pages](https://carraway-and-gatsby.github.io/cardio-simulator/)**.
+Its intended scope is exploration of the 3D atlas, numerical model, blood-flow
+animation, cardiac deformation and valve motion. English is the default; EN / KO
+switching preserves the current experiment. A WebGL-capable browser is required.
+
+On **2026-10-23**, the project owner explicitly requested public GitHub-hosted
+deployment of this open-source demo. This authorizes publication of the
+**unreviewed demonstration**, not expert certification of the anatomy or
+physiology. The generated HRA model is distributed with the web app as a Pages
+artifact under its upstream CC BY 4.0 terms; it is not committed to Git. The
+manifest continues to record `internal-only`, `unreviewed` and no project
+reviewer as the outstanding expert-reviewed release status. These fields are
+not a claim that the live demo is private, and must not be promoted to approved
+to make deployment pass.
+
+This explicitly requested demonstration is a separate publication scope from
+the project's expert-reviewed asset release. It does not relicense HRA material,
+add restrictions to CC BY 4.0, establish medical accuracy or make the prototype
+suitable for clinical decisions.
 
 | Included | Excluded from the public repository |
 | --- | --- |
@@ -34,6 +49,53 @@ inspected Blender 4.5.12 LTS. The live scene was an unsaved `Scene` containing
 the inspection bridge exited normally. Earlier feature logs retain their dated
 blocked-inspection results; the newer successful read does not retroactively
 change those records.
+
+## GitHub Pages deployment
+
+The Pages workflow runs in a clean GitHub Actions environment. It installs the
+pinned Node dependencies and Blender 4.5 LTS, acquires only the two versioned HRA
+sources declared in `assets/sources/heart-hra.json`, and verifies their SHA-256
+hashes before generation. The existing background Blender launcher operates on
+owned scenes; it does not connect to a developer's GUI or MCP server.
+
+Software tests and source checks are distinct from the generated-asset checks.
+The latter verify hashes, structure correspondence and geometry-preservation
+evidence. The workflow builds the app for `/cardio-simulator/`, stages the public
+web bundle and deploys it with GitHub Pages. Source CI continues to work without
+Blender or anatomical binaries.
+
+After local asset setup, reproduce the web artifact with:
+
+```bash
+npm run build:pages
+npm run verify:pages
+```
+
+`build:pages` builds the project base path, stages the selected files in
+`.local/pages/`, and verifies that artifact. `verify:pages` reruns the artifact
+check without rebuilding. The workflow uploads `.local/pages/`, not the broader
+`dist/` directory. Its earlier steps run the source audit, software tests,
+`anatomy:acquire`, `blender:build`, `blender:check` and `verify:assets`.
+
+The staged Pages artifact contains the application, the HRA GLB used by the
+viewer, the original-code MIT license, HRA attribution and modification notices,
+dependency license texts, and provenance for the generated model. It excludes
+raw HRA downloads, `.blend` scenes, the legacy schematic and procedural GLBs,
+private settings and local evidence. Binaries are excluded from Git history
+even when they are part of this separate web artifact.
+
+`demo-manifest.json` records the staged build and review scope. Model source,
+asset, structure and geometry records live under `provenance/`; dependency
+license texts are in `licenses/dependencies.md`. The artifact includes
+`THIRD_PARTY_NOTICES.md`, `assets/licenses/heart-hra.md` and this publication
+guide. Notice links to repository files resolve to the source revision used for
+the build.
+
+The demo retains its existing unreviewed/educational labels. Successful CI and
+deployment establish a working software build and traceable source conversion;
+they do not constitute anatomical, physiological or clinical review. Changes to
+source versions, processing or intended use still require a fresh provenance
+and publication-scope assessment.
 
 ## Fresh-clone workflow
 
@@ -92,12 +154,13 @@ npm run verify:release
 ```
 
 The first two commands verify generated scenes, source correspondence, metadata
-and hashes. The last command is the asset-release approval gate, and **must fail
-for the current assets**. It requires completed anatomical and distribution
-reviews, reviewer identity/date, evidence and a reviewed hash matching each
-output. Do not populate approval fields to make CI green. Source CI deliberately
-does not pretend to grant asset approval or automatically publish generated
-models.
+and hashes. The last command is the expert-reviewed asset-release approval gate,
+and **must fail for the current assets**. It requires completed anatomical and
+distribution reviews, reviewer identity/date, evidence and a reviewed hash matching each
+output. Do not populate approval fields to make CI green. Neither source CI nor
+the Pages workflow grants expert asset approval. The Pages workflow is limited
+to the public demonstration described above and must not describe that artifact
+as an approved anatomical release. An expected gate failure is not an approval.
 
 A successful local generation establishes reproducibility and file integrity,
 not wall thickness, physiological function, tissue mechanics, clinical accuracy

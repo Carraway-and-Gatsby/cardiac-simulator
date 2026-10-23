@@ -6,3 +6,5 @@
 .analysis-grid .hemo-charts{grid-template-columns:minmax(0,1fr)}
 /* Locale changes preserve the current experiment and view. */
 .physiology-lab header{flex-wrap:wrap}.language-switch{display:inline-flex;gap:3px;align-items:center;padding:3px;border:1px solid #c9d9d0;border-radius:8px;background:#f7faf8;flex-shrink:0}.language-switch button{border:0;border-radius:5px;padding:7px 10px;background:transparent;color:#47655b;font-size:11px;font-weight:650;min-width:38px}.language-switch button[aria-pressed=true]{background:#246e60;color:#fff}.language-switch button:focus-visible{outline:3px solid #218f86;outline-offset:3px}html[lang=en] .lab-intro h1{font-size:29px;letter-spacing:-.8px}html[lang=en] .metric h2{line-height:1.5}html[lang=en] .cycle-scrubber label{flex-wrap:wrap}html[lang=en] .hemo-circuit-node-label{font-size:10px}html[lang=en] .hemo-circuit-edge-label{font-size:10px}@media(max-width:600px){.language-switch{margin-left:auto}html[lang=en] .lab-intro h1{font-size:25px}html[lang=en] .motion-controls button{white-space:normal;line-height:1.4}}
+
+.physiology-lab footer a{color:#22776c;text-underline-offset:3px}

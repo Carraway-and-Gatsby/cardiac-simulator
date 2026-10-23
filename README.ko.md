@@ -3,9 +3,16 @@
 **[English](README.md) · [한국어](README.ko.md)**
 
 앱은 기본 영어로 시작하며 **EN / KO** 전환과 언어 선택 저장을 지원합니다.
+
+**[설치 없이 브라우저 데모 열기](https://carraway-and-gatsby.github.io/cardio-simulator/)**
+— WebGL을 지원하는 브라우저에서 3D 심장, 혈류와 동기화된 판막 애니메이션을 볼 수 있습니다.
+계정이나 API 키는 필요하지 않습니다.
+
 공개 저장소에는 소스 코드와 출처·해시·검증 기록을 포함합니다. 미검수 GLB와 Blender 장면은
-포함하지 않으며 아래 명령으로 로컬에서 생성합니다. 공개 소스·로컬 자산의 구분은
-[공개 소스 안내](docs/public-source-release.md), 영문 사용법은 [User guide](docs/user-guide.md)를 참고하세요.
+Git에서 제외합니다. 공개 데모에 필요한 HRA GLB는 GitHub Actions에서 고정된 원본으로 생성하여
+GitHub Pages 산출물로 배포합니다. 로컬 개발 시에는 아래 명령으로 자산을 생성합니다.
+공개 데모·소스·자산의 구분은 [공개 안내](docs/public-source-release.md),
+영문 사용법은 [User guide](docs/user-guide.md)를 참고하세요.
 
 브라우저에서 압력·용적·유량을 계산하는 교육용 0D 심혈관 실험실과 해부학 탐색기입니다.
 React Three Fiber 뷰어, Blender 자산 파이프라인, 독립적인 TypeScript 계산 엔진을 사용합니다.
@@ -14,7 +21,7 @@ React Three Fiber 뷰어, Blender 자산 파이프라인, 독립적인 TypeScrip
 직접 CT 분할 결과, 정상 성인의 보편적 표준, 해부학 승인 또는 사진 같은 표본 재현을 주장하지 않습니다.
 기존 18개 procedural 초안과 네 구체 도식의 자산·생성 경로도 보존합니다.
 
-## 빠른 시작
+## 로컬 실행
 
 ```bash
 git clone https://github.com/Carraway-and-Gatsby/cardio-simulator.git
@@ -59,7 +66,7 @@ Node 22.23.1을 기준으로 설치했으며 `.nvmrc`와 `package-lock.json`을 
 
 ## 구현 범위와 과학적 근거
 
-- **해부학:** Visible Human Male 기반 HRA 심장·혈관에서 44개 원본 메시를 선택합니다. 심장만의 원본 경계는 약 124.35 × 105.44 × 105.22 mm입니다. 원본의 미터 좌표·형상을 유지하며 전문가 검수와 배포 승인은 미완료입니다.
+- **해부학:** Visible Human Male 기반 HRA 심장·혈관에서 44개 원본 메시를 선택합니다. 심장만의 원본 경계는 약 124.35 × 105.44 × 105.22 mm입니다. 원본의 미터 좌표·형상을 유지하며 전문가 검수와 검수 완료 릴리스 승인은 미완료입니다. 공개 데모는 미검수 상태를 명시한 탐색용 시연입니다.
 - **계산:** LA/LV/SA/SV/RA/RV/PA/PV의 8개 구획, 시간 가변 엘라스턴스, 지수형 수동 압력, 저항·컴플라이언스, 네 판막의 부호 있는 흐름, 폐쇄 순환의 혈액량 보존. 고정 보폭 RK4와 주기 수렴 검사.
 - **질환:** 수축력 저하, 수동 강성 증가, 대동맥판 저항 증가, 승모판 역방향 전도도를 독립 기전으로 구현합니다. HFpEF 전체 임상 표현형, 판구 면적, 만성 재형성은 구현하지 않습니다.
 - **학습:** PV 루프와 압력/용적/판막 유량 탭, 정지·재생·속도·시점 선택, 전방 CO와 용적 박출량/EF 및 역류량 구분, 압력차에 따른 회로 화살표. ECG나 CFD 흐름은 생성하지 않습니다.
@@ -147,7 +154,8 @@ HRA GLB의 Y-up 미터 좌표를 보존하고, 화면 중앙 배치와 균일한
 독립 LCx 메시, 검증된 건삭·세부 첨판·심외막 지방·측정된 운동은 없습니다. 관상동맥 기시부·연속성·우세형,
 심근 두께와 모든 구조의 해부학적 정확성은 별도 검수 대상입니다. 표본 수준의 사진 같은 재현은 아직 달성하지 않았습니다.
 기존 초안의 기록은 [자체 제작 모델 출처](assets/licenses/heart-procedural.md)에 남깁니다.
-공개 라이선스 확인과 프로젝트 배포 승인은 별개이며, manifest는 미승인 상태를 유지합니다.
+공개 라이선스 확인, 미검수 공개 데모 허용과 전문가 검수 완료 릴리스 승인은 별개입니다.
+manifest의 승인 기록은 미완료 상태를 유지합니다.
 
 `blender/scripts/inspect_demo.py`는 기존 MCP 연결에서 생성 장면만 임시 링크하여 살펴보는 도구입니다.
 `begin()`은 `.local/inspection/`에 현재 상태의 사본을 저장하고 검사 장면으로 전환합니다.
@@ -169,6 +177,8 @@ npm run mcp:check -- --scene # 실제 MCP get_scene_info로 GUI 장면 조회
 npm run licenses        # lockfile 및 설치본 라이선스 목록 생성
 npm run mcp:probe       # GUI 애드온 시작 후, 두 클라이언트 MCP가 꺼진 상태에서 읽기 검사
 npm run verify:release # 현재는 실패가 정상: 검수·배포 권리 미승인
+npm run build:pages     # /cardio-simulator/ 경로의 데모 빌드·산출물 구성·검사
+npm run verify:pages    # .local/pages의 모델·출처·라이선스 고지 재검사
 npm run preview        # 빌드 결과 로컬 확인
 ```
 
@@ -177,7 +187,11 @@ npm run preview        # 빌드 결과 로컬 확인
 실제 MCP가 연결된 상태에서도 실행할 수 있습니다. 운영용 잠금 경로나 실행기는 바꾸지 않습니다.
 반면 `blender:build`, `blender:check`, 별도 MCP 검사 클라이언트는 실제 공통 잠금을 사용하므로
 현재 MCP 연결을 정상 중지한 뒤 실행해야 합니다.
-교육용 배포 전에 [해부학·라이선스 검수](docs/anatomy-and-licensing.md)를 완료해야 합니다.
+검수 완료 릴리스로 배포하려면 [해부학·라이선스 검수](docs/anatomy-and-licensing.md)를 완료해야 합니다.
+현재 공개 데모는 사용자가 요청한 미검수 소프트웨어 시연이며, 승인된 해부학 학습 자료나 임상 도구가 아닙니다.
+Pages 워크플로는 Blender 4.5 LTS로 고정된 HRA 원본을 처리하고 소스·자산 무결성을 검사합니다.
+실제 뷰어가 사용하는 HRA GLB와 출처·라이선스 고지를 웹 빌드에 포함하며, 기존 도식·절차적 초안,
+원본 다운로드, `.blend` 장면은 데모 산출물에서 제외합니다. `verify:release` 실패를 승인으로 바꾸지 않습니다.
 이번 실제 실행 결과와 남은 작업은 [설정 결과](docs/setup-status.md)에 기록합니다.
 
 ## 디렉터리
@@ -204,6 +218,7 @@ docs/                      설치, 검수, 인계, 실제 검증 결과
 프로젝트의 원본 코드·스크립트·테스트·번역·문서는 [MIT](LICENSE)로 공개합니다.
 HRA 유래 자료는 **CC BY 4.0**, 의존성은 각 원본 라이선스를 유지합니다.
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)의 저작자·출처·변경 기록을 함께 확인하세요.
-공개 소스 업로드는 미검수 자산의 해부학적 정확성·교육 배포 승인 또는 원저작자의 보증을 뜻하지 않습니다.
-`internal-only` / `unreviewed` 상태와 실패해야 하는 `verify:release` 게이트를 유지하며,
-GLB·생성 Blender 파일·로컬 증거·개인 설정은 공개 저장소에서 제외합니다.
+공개 소스와 데모 배포는 미검수 자산의 해부학적 정확성·검수 완료 릴리스 승인 또는 원저작자의 보증을 뜻하지 않습니다.
+manifest의 `internal-only` / `unreviewed` 승인 기록과 실패해야 하는 `verify:release` 게이트를 유지합니다.
+이번에 명시적으로 허용된 공개 데모의 범위는 [공개 안내](docs/public-source-release.md)에 기록합니다.
+GLB·생성 Blender 파일·로컬 증거·개인 설정은 Git에서 제외하며, 데모용 HRA GLB만 별도 Pages 산출물에 포함합니다.

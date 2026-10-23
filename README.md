@@ -8,12 +8,18 @@ and valve animation. Built with React, TypeScript, Three.js and a reproducible
 Blender pipeline. The interface defaults to **English**, with an **EN / KO**
 switch and a saved language preference.
 
+**[Open the browser demo](https://carraway-and-gatsby.github.io/cardio-simulator/)**
+— no installation, account or API key required. Use a browser with WebGL support
+to explore the 3D heart, blood flow and synchronized valve animation.
+
 **This is an educational software prototype, not a clinically validated
 simulator.** The HRA atlas, educational deformation and reconstructed leaflets
-have not received project anatomical approval. The source repository is public;
-unreviewed downloaded/generated anatomical binaries are deliberately excluded.
+have not received project anatomical approval. The public demo presents this
+unreviewed prototype for exploration; it is not an approved anatomical reference
+or a tool for clinical decisions. Generated anatomical binaries are distributed
+with the demo as a GitHub Pages artifact, and remain excluded from Git history.
 
-## Quick start
+## Run locally
 
 Requirements: Node.js from [`.nvmrc`](.nvmrc), npm, Python 3, and **Blender 4.5 LTS**
 for local anatomical asset generation. The numerical engine and source tests do
@@ -41,7 +47,8 @@ Open the localhost URL printed by Vite. `setup:assets` downloads two versioned
 **CC BY 4.0 HRA sources**, verifies their pinned SHA-256 hashes, generates the
 three owned scenes in a separate background Blender process, and verifies the
 outputs. Downloads remain in ignored `.local/anatomy-sources/`; generated GLBs
-and `.blend` files also stay local. No API key or clinical dataset is needed.
+and `.blend` files are also ignored by Git. The Pages workflow builds its own
+demo assets from the same pinned sources. No API key or clinical dataset is needed.
 The acquisition command refuses to overwrite an existing source with a different
 hash. Use `python3 scripts/acquire-anatomy.py --verify-only` for an offline source
 check. A source-only build can pass before assets exist, but rendering the 3D
@@ -116,6 +123,8 @@ npm run validate:physiology # Regenerate the numerical report with source hashes
 npm run blender:check       # Actual Blender generation, preservation and reimport checks
 npm run verify:assets       # Check local assets and manifest integrity
 npm run verify:release      # Expected failure: current assets lack expert/release approval
+npm run build:pages         # Build /cardio-simulator/ and stage the audited demo artifact
+npm run verify:pages        # Recheck .local/pages, model provenance and included notices
 npm run licenses            # Dependency license inventory from lockfile and install
 npm run preview             # Serve the production build locally
 ```
@@ -125,8 +134,16 @@ ones. Both clients must use `scripts/blender-mcp.py`; only one may own the share
 connection at a time. The app itself needs neither an AI client nor MCP. Background
 asset generation does not open or overwrite the live GUI scene.
 
-The source CI checks software without downloading or publishing anatomical
-binaries. It is distinct from the deliberately failing asset-release gate.
+The source CI checks software without downloading anatomical binaries. The
+separate Pages workflow builds the public demo from hash-pinned HRA sources with
+Blender 4.5 LTS, checks source and generated-asset integrity, and publishes the
+web build with attribution and license notices. Only the HRA model used by the
+viewer is included in the demo; the legacy schematic and procedural assets, raw
+downloads and `.blend` scenes are omitted.
+
+This public demonstration does not satisfy the separate expert-reviewed release
+gate: `verify:release` must still fail. Approval records remain unchanged, and
+passing software checks does not establish anatomical or clinical accuracy.
 Changing bpy requires `blender:check` and `verify:assets`. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for translation, scientific-change and review
 requirements. Historical validation and handoff logs, including Korean records,
@@ -144,7 +161,7 @@ scripts/              Acquisition, local setup, verification and shared MCP lock
 assets/               Source/license evidence and unapproved asset manifest
 tests/                Numerical, motion, flow, geometry and coordination checks
 docs/                 Model equations, user guide, provenance and validation records
-public/models/        Locally generated GLBs (excluded from Git)
+public/models/        Generated GLBs (excluded from Git; HRA model used by Pages)
 blender/generated/    Locally generated .blend files and reports (excluded from Git)
 .local/               Local source caches, backups and evidence (excluded from Git)
 ```
@@ -155,5 +172,7 @@ Original code, tests, scripts, translations and documentation are available unde
 [MIT](LICENSE). HRA-derived material retains **CC BY 4.0**; dependencies retain
 their upstream licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for
 creators, citations, modifications and notices. Open-source publication does not
-change the manifest's `internal-only` / `unreviewed` asset-review status or imply
-endorsement by HRA, HuBMAP or source reviewers.
+change the manifest's pending `internal-only` / `unreviewed` approval records or
+imply endorsement by HRA, HuBMAP or source reviewers. The specifically authorized
+public demo and the still-blocked expert-reviewed release are documented in
+[the publication guide](docs/public-source-release.md).
