@@ -8,7 +8,7 @@ and valve animation. Built with React, TypeScript, Three.js and a reproducible
 Blender pipeline. The interface defaults to **English**, with an **EN / KO**
 switch and a saved language preference.
 
-**[Open the browser demo](https://carraway-and-gatsby.github.io/cardio-simulator/)**
+**[Open the browser demo](https://carraway-and-gatsby.github.io/cardiac-simulator/)**
 — no installation, account or API key required. Use a browser with WebGL support
 to explore the 3D heart, blood flow and synchronized valve animation.
 
@@ -27,8 +27,8 @@ not require Blender. The shared Blender launcher currently supports macOS/Linux
 file locking; Windows users can use a supported POSIX development environment.
 
 ```bash
-git clone https://github.com/Carraway-and-Gatsby/cardio-simulator.git
-cd cardio-simulator
+git clone https://github.com/Carraway-and-Gatsby/cardiac-simulator.git
+cd cardiac-simulator
 npm ci
 npm run check:source
 ```
@@ -123,7 +123,7 @@ npm run validate:physiology # Regenerate the numerical report with source hashes
 npm run blender:check       # Actual Blender generation, preservation and reimport checks
 npm run verify:assets       # Check local assets and manifest integrity
 npm run verify:release      # Expected failure: current assets lack expert/release approval
-npm run build:pages         # Build /cardio-simulator/ and stage the audited demo artifact
+npm run build:pages         # Build /cardiac-simulator/ and stage the audited demo artifact
 npm run verify:pages        # Recheck .local/pages, model provenance and included notices
 npm run licenses            # Dependency license inventory from lockfile and install
 npm run preview             # Serve the production build locally

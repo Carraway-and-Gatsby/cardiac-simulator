@@ -16,7 +16,7 @@ assert.equal(manifest.model.id, 'heart-hra-male-v1');
 assert.equal(manifest.model.anatomyReview, 'unreviewed');
 assert.equal(manifest.model.license, 'CC-BY-4.0');
 assert.equal(manifest.model.sha256, asset.sha256);
-assert.equal(manifest.base, '/cardio-simulator/');
+assert.equal(manifest.base, '/cardiac-simulator/');
 assert.match(manifest.commit, /^[0-9a-f]{40}$/);
 
 const allowed = /^(?:index\.html|\.nojekyll|LICENSE|THIRD_PARTY_NOTICES\.md|demo-manifest\.json|docs\/public-source-release\.md|assets\/licenses\/heart-hra\.md|assets\/[^/]+\.(?:js|css)|models\/heart-hra\.glb|licenses\/dependencies\.(?:json|md)|provenance\/heart-hra\.(?:source|structures|geometry|asset)\.json)$/;

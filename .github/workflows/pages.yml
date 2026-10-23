@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == 'Carraway-and-Gatsby/cardio-simulator' && github.ref == 'refs/heads/main'
+    if: github.repository == 'Carraway-and-Gatsby/cardiac-simulator' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     permissions:

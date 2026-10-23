@@ -4,7 +4,7 @@
 
 앱은 기본 영어로 시작하며 **EN / KO** 전환과 언어 선택 저장을 지원합니다.
 
-**[설치 없이 브라우저 데모 열기](https://carraway-and-gatsby.github.io/cardio-simulator/)**
+**[설치 없이 브라우저 데모 열기](https://carraway-and-gatsby.github.io/cardiac-simulator/)**
 — WebGL을 지원하는 브라우저에서 3D 심장, 혈류와 동기화된 판막 애니메이션을 볼 수 있습니다.
 계정이나 API 키는 필요하지 않습니다.
 
@@ -24,8 +24,8 @@ React Three Fiber 뷰어, Blender 자산 파이프라인, 독립적인 TypeScrip
 ## 로컬 실행
 
 ```bash
-git clone https://github.com/Carraway-and-Gatsby/cardio-simulator.git
-cd cardio-simulator
+git clone https://github.com/Carraway-and-Gatsby/cardiac-simulator.git
+cd cardiac-simulator
 npm ci
 npm run check:source
 # 설치된 Blender 4.5 LTS 실행 파일의 경로를 지정합니다.
@@ -177,7 +177,7 @@ npm run mcp:check -- --scene # 실제 MCP get_scene_info로 GUI 장면 조회
 npm run licenses        # lockfile 및 설치본 라이선스 목록 생성
 npm run mcp:probe       # GUI 애드온 시작 후, 두 클라이언트 MCP가 꺼진 상태에서 읽기 검사
 npm run verify:release # 현재는 실패가 정상: 검수·배포 권리 미승인
-npm run build:pages     # /cardio-simulator/ 경로의 데모 빌드·산출물 구성·검사
+npm run build:pages     # /cardiac-simulator/ 경로의 데모 빌드·산출물 구성·검사
 npm run verify:pages    # .local/pages의 모델·출처·라이선스 고지 재검사
 npm run preview        # 빌드 결과 로컬 확인
 ```

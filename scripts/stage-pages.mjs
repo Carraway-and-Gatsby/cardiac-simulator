@@ -5,8 +5,8 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
 const destination = '.local/pages';
-const base = '/cardio-simulator/';
-const repository = 'https://github.com/Carraway-and-Gatsby/cardio-simulator';
+const base = '/cardiac-simulator/';
+const repository = 'https://github.com/Carraway-and-Gatsby/cardiac-simulator';
 const commit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
 const readJson = path => JSON.parse(readFileSync(path, 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');

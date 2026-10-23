@@ -10,7 +10,7 @@ metadata retains CC BY 4.0 attribution as described in
 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
 The installation-free browser demonstration uses this GitHub Pages address:
-**[CardioLab on GitHub Pages](https://carraway-and-gatsby.github.io/cardio-simulator/)**.
+**[CardioLab on GitHub Pages](https://carraway-and-gatsby.github.io/cardiac-simulator/)**.
 Its intended scope is exploration of the 3D atlas, numerical model, blood-flow
 animation, cardiac deformation and valve motion. English is the default; EN / KO
 switching preserves the current experiment. A WebGL-capable browser is required.
@@ -60,7 +60,7 @@ owned scenes; it does not connect to a developer's GUI or MCP server.
 
 Software tests and source checks are distinct from the generated-asset checks.
 The latter verify hashes, structure correspondence and geometry-preservation
-evidence. The workflow builds the app for `/cardio-simulator/`, stages the public
+evidence. The workflow builds the app for `/cardiac-simulator/`, stages the public
 web bundle and deploys it with GitHub Pages. Source CI continues to work without
 Blender or anatomical binaries.
 

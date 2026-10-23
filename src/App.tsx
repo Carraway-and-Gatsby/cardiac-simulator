@@ -148,6 +148,6 @@ export default function App() {
     {retainedResult ? <div hidden={pending || !!error || !result?.diagnostics.modelWithinDomain}>
       <Results result={retainedResult} playing={playing && !!result?.diagnostics.modelWithinDomain && !pending} setPlaying={setPlaying} />
     </div> : null}
-    <footer><span>{t('CardioLab · education and research portfolio · anatomy awaiting review', 'CardioLab · 교육·연구 포트폴리오 · 검수 전 해부학')}<br /><a href="https://github.com/Carraway-and-Gatsby/cardio-simulator" target="_blank" rel="noreferrer">{t('Open source on GitHub', 'GitHub 오픈소스')}</a> · <a href="https://github.com/Carraway-and-Gatsby/cardio-simulator/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">{t('Licenses & attribution', '라이선스 및 출처')}</a></span><span>{t('Do not use for diagnosis, treatment decisions or individual medical predictions.', '진단·치료 판단 또는 개인별 의학적 예측에 사용하지 마세요.')}</span></footer>
+    <footer><span>{t('CardioLab · education and research portfolio · anatomy awaiting review', 'CardioLab · 교육·연구 포트폴리오 · 검수 전 해부학')}<br /><a href="https://github.com/Carraway-and-Gatsby/cardiac-simulator" target="_blank" rel="noreferrer">{t('Open source on GitHub', 'GitHub 오픈소스')}</a> · <a href="https://github.com/Carraway-and-Gatsby/cardiac-simulator/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noreferrer">{t('Licenses & attribution', '라이선스 및 출처')}</a></span><span>{t('Do not use for diagnosis, treatment decisions or individual medical predictions.', '진단·치료 판단 또는 개인별 의학적 예측에 사용하지 마세요.')}</span></footer>
   </main>;
 }

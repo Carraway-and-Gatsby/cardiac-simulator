@@ -1,5 +1,5 @@
 {
-  "name": "cardio-simulator",
+  "name": "cardiac-simulator",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -31,7 +31,7 @@
     "check:source": "npm run verify:source && npm test && npm run build",
     "setup:assets": "npm run anatomy:acquire && npm run blender:build && npm run verify:assets",
     "setup:local": "python3 scripts/setup-local.py",
-    "build:pages": "npm run build -- --base=/cardio-simulator/ && node scripts/stage-pages.mjs && node scripts/verify-pages.mjs",
+    "build:pages": "npm run build -- --base=/cardiac-simulator/ && node scripts/stage-pages.mjs && node scripts/verify-pages.mjs",
     "verify:pages": "node scripts/verify-pages.mjs"
   },
   "dependencies": {
@@ -52,7 +52,7 @@
   "description": "Bilingual educational cardiovascular physiology lab with synchronized 3D heart, valve and flow visualization.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Carraway-and-Gatsby/cardio-simulator.git"
+    "url": "https://github.com/Carraway-and-Gatsby/cardiac-simulator.git"
   },
-  "homepage": "https://carraway-and-gatsby.github.io/cardio-simulator/"
+  "homepage": "https://carraway-and-gatsby.github.io/cardiac-simulator/"
 }
